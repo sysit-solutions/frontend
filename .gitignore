@@ -1,0 +1,13 @@
+node_modules
+dist
+*.lock
+stats.html
+cbsd.conf
+project.mk
+ansible/group_vars/all
+ansible/inventory/inventory
+ansible/roles/*
+!ansible/roles/.keep
+!ansible/roles/devel
+ansible/site.yml
+site.retry
