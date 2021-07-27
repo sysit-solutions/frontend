@@ -11,13 +11,13 @@ const myconfig = {
   ],
 }
 
+const webpackConfig = _.merge(defaultConfig, myconfig)
+webpackConfig.devServer.allowedHosts = 'all'
 const target = process.env.BACKEND_URL
 if (target) {
-  myconfig.devServer.proxy = {
+  webpackConfig.devServer.proxy = {
     '/api': { target },
   }
 }
-
-const webpackConfig = _.merge(defaultConfig, myconfig)
 
 module.exports = webpackConfig
