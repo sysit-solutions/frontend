@@ -1,0 +1,138 @@
+{
+  "tree": {
+    "identity": "root",
+    "name": "div",
+    "type": "html",
+    "text": "",
+    "opened": true,
+    "props": {
+      "identity": "sutRzgTZ",
+      "value": {
+        "style": {
+          "identity": "eHZmvLGr",
+          "value": {
+            "height": {
+              "identity": "FzcbeQah",
+              "value": "calc(100vh - 4px)",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "AppBar",
+        "type": "mui",
+        "props": {
+          "identity": "QDhliNXz",
+          "value": {
+            "position": {
+              "identity": "KkcKbAnx",
+              "value": "sticky",
+              "type": "string"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "Toolbar",
+            "type": "mui",
+            "text": "",
+            "opened": false,
+            "props": {
+              "identity": "JJExaKRy",
+              "value": {}
+            },
+            "children": [
+              {
+                "name": "Typography",
+                "type": "mui",
+                "text": "Content Creation",
+                "opened": false,
+                "props": {
+                  "identity": "igsaTTdQ",
+                  "value": {
+                    "variant": {
+                      "identity": "AXLdveBf",
+                      "value": "h6",
+                      "type": "string"
+                    }
+                  }
+                },
+                "children": [],
+                "identity": "aNBMwZqd"
+              }
+            ],
+            "identity": "zcZXGZvS"
+          }
+        ],
+        "text": "",
+        "opened": false,
+        "identity": "rxlAzLJf"
+      },
+      {
+        "name": "ul",
+        "type": "html",
+        "props": {
+          "identity": "doAeVpWp",
+          "value": {}
+        },
+        "children": [
+          {
+            "name": "li",
+            "type": "html",
+            "props": {
+              "identity": "KHZSVpuN",
+              "value": {}
+            },
+            "children": [],
+            "text": "Course Content",
+            "opened": false,
+            "identity": "xSJtlhMi"
+          },
+          {
+            "name": "li",
+            "type": "html",
+            "props": {
+              "identity": "KHZSVpuN",
+              "value": {}
+            },
+            "children": [],
+            "text": "Video Recording",
+            "opened": false,
+            "identity": "cIuXnKIo"
+          },
+          {
+            "name": "li",
+            "type": "html",
+            "props": {
+              "identity": "KHZSVpuN",
+              "value": {}
+            },
+            "children": [],
+            "text": "Audio Production",
+            "opened": false,
+            "identity": "QpELrMSu"
+          },
+          {
+            "name": "li",
+            "type": "html",
+            "props": {
+              "identity": "KHZSVpuN",
+              "value": {}
+            },
+            "children": [],
+            "text": "Voice Acting",
+            "opened": false,
+            "identity": "LONmrtTo"
+          }
+        ],
+        "text": "",
+        "opened": true,
+        "identity": "qDndXQyi"
+      }
+    ]
+  },
+  "theme": {}
+}

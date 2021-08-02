@@ -1,0 +1,126 @@
+{
+  "tree": {
+    "identity": "root",
+    "name": "div",
+    "type": "html",
+    "text": "",
+    "opened": true,
+    "props": {
+      "identity": "sutRzgTZ",
+      "value": {
+        "style": {
+          "identity": "eHZmvLGr",
+          "value": {
+            "height": {
+              "identity": "FzcbeQah",
+              "value": "calc(100vh - 4px)",
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "children": [
+      {
+        "name": "AppBar",
+        "type": "mui",
+        "props": {
+          "identity": "QDhliNXz",
+          "value": {
+            "position": {
+              "identity": "KkcKbAnx",
+              "value": "sticky",
+              "type": "string"
+            }
+          }
+        },
+        "children": [
+          {
+            "name": "Toolbar",
+            "type": "mui",
+            "text": "",
+            "opened": false,
+            "props": {
+              "identity": "JJExaKRy",
+              "value": {}
+            },
+            "children": [
+              {
+                "name": "Typography",
+                "type": "mui",
+                "text": "Security",
+                "opened": false,
+                "props": {
+                  "identity": "igsaTTdQ",
+                  "value": {
+                    "variant": {
+                      "identity": "AXLdveBf",
+                      "value": "h6",
+                      "type": "string"
+                    }
+                  }
+                },
+                "children": [],
+                "identity": "aNBMwZqd"
+              }
+            ],
+            "identity": "zcZXGZvS"
+          }
+        ],
+        "text": "",
+        "opened": false,
+        "identity": "rxlAzLJf"
+      },
+      {
+        "name": "ul",
+        "type": "html",
+        "props": {
+          "identity": "doAeVpWp",
+          "value": {}
+        },
+        "children": [
+          {
+            "name": "li",
+            "type": "html",
+            "props": {
+              "identity": "KHZSVpuN",
+              "value": {}
+            },
+            "children": [],
+            "text": "Backup",
+            "opened": false,
+            "identity": "xSJtlhMi"
+          },
+          {
+            "name": "li",
+            "type": "html",
+            "props": {
+              "identity": "KHZSVpuN",
+              "value": {}
+            },
+            "children": [],
+            "text": "System Administration",
+            "opened": false,
+            "identity": "tBewnCoA"
+          },
+          {
+            "name": "li",
+            "type": "html",
+            "props": {
+              "identity": "KHZSVpuN",
+              "value": {}
+            },
+            "children": [],
+            "text": "Web Administration",
+            "opened": false,
+            "identity": "mGVPRMPL"
+          }
+        ],
+        "text": "",
+        "opened": true,
+        "identity": "qDndXQyi"
+      }
+    ]
+  },
+  "theme": {}
+}

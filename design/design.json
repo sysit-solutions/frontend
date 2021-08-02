@@ -4,7 +4,7 @@
     "name": "div",
     "type": "html",
     "text": "",
-    "opened": true,
+    "opened": false,
     "props": {
       "identity": "TiCEdkvz",
       "value": {
@@ -90,34 +90,9 @@
                   }
                 },
                 "children": [],
-                "text": "Learning",
+                "text": "Hosting",
                 "opened": false,
                 "identity": "bCPlMSUX"
-              },
-              {
-                "name": "Button",
-                "type": "mui",
-                "props": {
-                  "identity": "oWIPmLsV",
-                  "value": {
-                    "style": {
-                      "identity": "WQCZNZdg",
-                      "value": {
-                        "color": {
-                          "identity": "sXLUHdgH",
-                          "value": "white",
-                          "type": "string",
-                          "name": ""
-                        }
-                      },
-                      "type": "string"
-                    }
-                  }
-                },
-                "children": [],
-                "text": "Cloud",
-                "opened": false,
-                "identity": "pXjhIgmz"
               },
               {
                 "name": "Button",
@@ -143,6 +118,56 @@
                 "text": "Security",
                 "opened": false,
                 "identity": "rdtuiQpm"
+              },
+              {
+                "name": "Button",
+                "type": "mui",
+                "props": {
+                  "identity": "oWIPmLsV",
+                  "value": {
+                    "style": {
+                      "identity": "WQCZNZdg",
+                      "value": {
+                        "color": {
+                          "identity": "sXLUHdgH",
+                          "value": "white",
+                          "type": "string",
+                          "name": ""
+                        }
+                      },
+                      "type": "string"
+                    }
+                  }
+                },
+                "children": [],
+                "text": "Instructional Design",
+                "opened": false,
+                "identity": "lXHUvoMJ"
+              },
+              {
+                "name": "Button",
+                "type": "mui",
+                "props": {
+                  "identity": "oWIPmLsV",
+                  "value": {
+                    "style": {
+                      "identity": "WQCZNZdg",
+                      "value": {
+                        "color": {
+                          "identity": "sXLUHdgH",
+                          "value": "white",
+                          "type": "string",
+                          "name": ""
+                        }
+                      },
+                      "type": "string"
+                    }
+                  }
+                },
+                "children": [],
+                "text": "Content Creation",
+                "opened": false,
+                "identity": "gpBsqVzj"
               }
             ],
             "text": "",
@@ -171,7 +196,7 @@
                 },
                 "backgroundColor": {
                   "identity": "qelNvbMc",
-                  "value": "#3f51b5",
+                  "value": "#d5d9ec",
                   "type": "color"
                 },
                 "display": {
@@ -234,9 +259,14 @@
                       "value": "column",
                       "type": "string"
                     },
-                    "padding": {
-                      "identity": "ZpyhHjAZ",
-                      "value": 100,
+                    "paddingLeft": {
+                      "identity": "pPYgQNdQ",
+                      "value": 50,
+                      "type": "number"
+                    },
+                    "paddingRight": {
+                      "identity": "pBLdyvpW",
+                      "value": 50,
                       "type": "number"
                     }
                   },
@@ -256,12 +286,17 @@
                       "value": {
                         "color": {
                           "identity": "DwqnTGwH",
-                          "value": "#ffffff",
+                          "value": "#46474b",
                           "type": "color"
                         },
                         "width": {
                           "identity": "afmbGQup",
                           "value": "100%",
+                          "type": "string"
+                        },
+                        "font-size": {
+                          "identity": "OVIrIbiz",
+                          "value": "2rem",
                           "type": "string"
                         }
                       },
@@ -270,7 +305,7 @@
                   }
                 },
                 "children": [],
-                "text": "Welcome to SysIT solutions. We offer affordable and reliable open source education hosting packages designed specifically for educational institutions. Our platform allows teachers and students from any country around the world to create their own websites without having to worry about technical issues like security updates, backups or server maintenance.",
+                "text": "Offering affordable and reliable open source education hosting solutions designed specifically for your needs. ",
                 "opened": false,
                 "identity": "tCesVehp"
               },
@@ -283,6 +318,11 @@
                     "variant": {
                       "identity": "crpHkKVm",
                       "value": "contained",
+                      "type": "string"
+                    },
+                    "color": {
+                      "identity": "EPESOhbC",
+                      "value": "primary",
                       "type": "string"
                     }
                   }
@@ -798,7 +838,7 @@
           }
         ],
         "text": "",
-        "opened": true,
+        "opened": false,
         "identity": "uYFllVEN"
       },
       {
@@ -852,7 +892,7 @@
                   "value": {
                     "width": {
                       "identity": "dedghEFL",
-                      "value": "100%",
+                      "value": "48%",
                       "type": "string"
                     },
                     "backgroundImage": {
@@ -898,8 +938,13 @@
                     },
                     "paddingLeft": {
                       "identity": "mGoystjv",
-                      "value": 20,
+                      "value": 50,
                       "type": "number"
+                    },
+                    "font-size": {
+                      "identity": "hPVZuGwh",
+                      "value": "1.5rem",
+                      "type": "string"
                     }
                   },
                   "type": "string"
@@ -915,18 +960,30 @@
                   "value": {}
                 },
                 "children": [],
-                "text": "Our mission is to make online education accessible for everyone. We do this by offering affordable solutions that are easy to use and provide you with all the tools necessary for running your own online classroom or a coaching service in just a few clicks!",
-                "opened": false,
+                "text": "Welcome to SysIT Solutions. With our help teachers, students and business professionals from all around the world would be able to create their own e-learning content without having to worry about technical issues like security updates, backups or server maintenance.",
+                "opened": true,
                 "identity": "WOByPtTU"
+              },
+              {
+                "name": "p",
+                "type": "html",
+                "props": {
+                  "identity": "YgrHZbkh",
+                  "value": {}
+                },
+                "children": [],
+                "text": "Our mission is to make online education accessible for everyone. We do this by offering affordable solutions that are easy to use and provide you with all the tools necessary for running your own online classroom or a coaching service in just a few clicks!",
+                "opened": true,
+                "identity": "KApzNSgJ"
               }
             ],
             "text": "",
-            "opened": false,
+            "opened": true,
             "identity": "rBDRUmvu"
           }
         ],
         "text": "",
-        "opened": false,
+        "opened": true,
         "identity": "NkynYXOo"
       },
       {
@@ -1204,6 +1261,11 @@
                   "identity": "kgvTTaxS",
                   "value": "#eeeeee",
                   "type": "color"
+                },
+                "color": {
+                  "identity": "RxheYJya",
+                  "value": "gray",
+                  "type": "string"
                 }
               },
               "type": "string"
@@ -1211,7 +1273,7 @@
           }
         },
         "children": [],
-        "text": "2021 SysIT",
+        "text": "2021 SysIT LLC",
         "opened": false,
         "identity": "VINcYnSk"
       }

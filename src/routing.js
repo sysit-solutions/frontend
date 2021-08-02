@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 
 import { Auth, Profile, NoPage } from '@freenit-framework/core'
 
-import { Dashboard, Landing, Role, User } from 'pages'
+import { Dashboard, Landing, Role, User, Hosting } from 'pages'
 
 const Routing = () => {
   return (
@@ -11,6 +11,7 @@ const Routing = () => {
       <Route exact path="/" component={Landing.Detail} />
       <Route exact path="/confirm/:token" component={Auth.Confirm} />
       <Route exact path="/dashboard" component={Dashboard.Detail} />
+      <Route exact path="/hosting" component={Hosting.Detail} />
       <Route exact path="/login" component={Auth.Login} />
       <Route exact path="/profile" component={Profile.Detail} />
       <Route exact path="/register" component={Auth.Register} />
