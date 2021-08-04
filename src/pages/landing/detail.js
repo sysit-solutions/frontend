@@ -12,6 +12,7 @@ import {
   TextField,
 } from '@material-ui/core'
 import { errors } from '@freenit-framework/core'
+import Template from 'templates/default/detail'
 import store from 'store'
 
 class Landing extends React.Component {
@@ -44,18 +45,7 @@ class Landing extends React.Component {
 
   render() {
     return (
-      <div style={{ height: 'calc(100vh - 4px)' }}>
-        <AppBar
-          position="sticky"
-          style={{ display: 'flex', alignItems: 'center', boxShadow: 'none' }}
-        >
-          <Toolbar>
-            <Button style={{ color: 'white' }}>Hosting</Button>
-            <Button style={{ color: 'white' }}>Security</Button>
-            <Button style={{ color: 'white' }}>Instructional Design</Button>
-            <Button style={{ color: 'white' }}>Content Creation</Button>
-          </Toolbar>
-        </AppBar>
+      <Template style={{}}>
         <div
           style={{
             height: 'calc(100vh - 65px)',
@@ -229,22 +219,7 @@ class Landing extends React.Component {
             </Button>
           </form>
         </div>
-        <div
-          style={{
-            padding: 20,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            alignText: 'center',
-            borderWidth: 1,
-            borderStyle: 'solid',
-            borderColor: '#eeeeee',
-            color: 'gray',
-          }}
-        >
-          2021 SysIT LLC
-        </div>
-      </div>
+      </Template>
     )
   }
 }

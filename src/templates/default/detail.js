@@ -6,6 +6,7 @@ import store from 'store'
 // Components
 import {
   AppBar,
+  Button,
   Drawer,
   IconButton,
   ListItemIcon,
@@ -122,23 +123,23 @@ class Template extends React.Component {
     const BarLinks = resolution.width > 410 ? <div>{AuthButton}</div> : null
     return (
       <div>
-        <AppBar position="static">
-          <Toolbar>
-            <Typography variant="h5" color="inherit" style={styles.flex}>
-              <IconButton color="inherit" onClick={this.handleMenuOpen}>
-                <MenuIcon />
-              </IconButton>
-              <Link to="/" data-id="app">
-                Freenit
-              </Link>
-            </Typography>
-            {BarLinks}
-          </Toolbar>
-        </AppBar>
         <EmptyTemplate.Detail
           secure={this.props.secure}
           style={this.props.style}
         >
+          <AppBar
+            position="sticky"
+            style={{ display: 'flex', alignItems: 'center', boxShadow: 'none' }}
+          >
+            <Toolbar>
+              <Link to="/hosting">
+                <Button style={{ color: 'white' }}>Hosting</Button>
+              </Link>
+              <Button style={{ color: 'white' }}>Security</Button>
+              <Button style={{ color: 'white' }}>Instructional Design</Button>
+              <Button style={{ color: 'white' }}>Content Creation</Button>
+            </Toolbar>
+          </AppBar>
           {this.props.children}
           <Drawer open={this.state.showMenu} onClose={this.handleMenuClose}>
             <AppBar position="static">
@@ -162,6 +163,21 @@ class Template extends React.Component {
               {LoggingMenu}
             </div>
           </Drawer>
+          <div
+            style={{
+              padding: 20,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              alignText: 'center',
+              borderWidth: 1,
+              borderStyle: 'solid',
+              borderColor: '#eeeeee',
+              color: 'gray',
+            }}
+          >
+            2021 SysIT LLC
+          </div>
         </EmptyTemplate.Detail>
       </div>
     )
