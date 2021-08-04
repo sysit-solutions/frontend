@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import { ThemeProvider } from '@material-ui/styles'
 import { Style } from 'radium'
 import { StoreContext, StoreProvider } from '@freenit-framework/core'
+import ScrollToTop from 'react-router-scroll-top'
 
 import store from 'store'
 import Routing from 'routing'
@@ -15,10 +16,12 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <Style rules={styles} />
       <Router>
-        <StoreProvider store={store} />
-        <StoreContext.Provider value={store}>
-          <Routing />
-        </StoreContext.Provider>
+        <ScrollToTop>
+          <StoreProvider store={store} />
+          <StoreContext.Provider value={store}>
+            <Routing />
+          </StoreContext.Provider>
+        </ScrollToTop>
       </Router>
     </ThemeProvider>
   )
