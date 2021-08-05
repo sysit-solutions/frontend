@@ -1,31 +1,98 @@
+import graph from './img/hosting.svg'
+import logo from './img/logo.png'
+
 const styles = {
   root: {
-    minHeight: 'calc(100vh - 64px - 40px)',
+    height: 'calc(100vh - 65px)',
+    backgroundColor: '#d5d9ec',
     display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
     alignItems: 'center',
-    padding: 20,
+    justifyContent: 'center',
   },
 
-  small: {
-    fontSize: '25px',
-    marginTop: 10,
-    color: 'rgb(80, 80, 80)',
+  first: {
+    graph: {
+      width: '100%',
+      height: '100%',
+      backgroundSize: '90% 90%',
+      backgroundImage: `url("${graph}")`,
+      backgroundRepeat: 'no-repeat',
+    },
+
+    left: {
+      width: '100%',
+      height: '100%',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: 'column',
+      paddingLeft: 50,
+      paddingRight: 50,
+    },
+
+    paragraph: {
+      color: '#46474b',
+      width: '100%',
+      fontSize: '2rem',
+    },
   },
 
-  link: {
-    color: 'white',
+  second: {
+    display: 'flex',
+    flexDirection: 'row',
+    padding: 50,
+    alignItems: 'stretch',
+    height: '250',
   },
 
-  freenit: {
-    height: 70,
-    width: 290,
-    maxWidth: '100%',
-    fontSize: 36,
-    marginTop: 40,
+  card: {
+    width: '100%',
+    media: {
+      height: 250,
+      backgroundSize: '100% 100%',
+    },
+  },
+
+  about: {
+    display: 'flex',
+    justifyContent: 'center',
+    height: 350,
+    alignItems: 'center',
+    padding: 50,
+
+    logo: {
+      width: '48%',
+      backgroundImage: `url("${logo}")`,
+      backgroundSize: '100% 100%',
+      height: '100%',
+    },
+
+    paragraph: {
+      width: '100%',
+      paddingLeft: 50,
+      fontSize: '1.5rem',
+    },
+  },
+
+  contact: {
+    padding: 50,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    form: {
+      maxWidth: 450,
+      width: '100%',
+    },
+
+    title: {
+      textAlign: 'center',
+    },
+
+    button: {
+      marginTop: 10,
+    },
   },
 }
-
 
 export default styles

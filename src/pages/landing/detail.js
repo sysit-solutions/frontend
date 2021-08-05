@@ -15,11 +15,10 @@ import {
 import { errors } from '@freenit-framework/core'
 import Template from 'templates/default/detail'
 import store from 'store'
-import graph from './img/hosting.svg'
 import moodle from './img/moodle.png'
 import opigno from './img/opigno.png'
 import learndash from './img/learndash.png'
-import logo from './img/logo.png'
+import styles from './styles'
 
 class Landing extends React.Component {
   state = {
@@ -52,28 +51,9 @@ class Landing extends React.Component {
   render() {
     return (
       <Template style={{}}>
-        <div
-          style={{
-            height: 'calc(100vh - 65px)',
-            backgroundColor: '#d5d9ec',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <div
-            style={{
-              width: '100%',
-              height: '100%',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              flexDirection: 'column',
-              paddingLeft: 50,
-              paddingRight: 50,
-            }}
-          >
-            <p style={{ color: '#46474b', width: '100%', fontSize: '2rem' }}>
+        <div style={styles.root}>
+          <div style={styles.first.left}>
+            <p style={styles.first.paragraph}>
               Offering affordable and reliable open source education hosting
               solutions designed specifically for your needs.
             </p>
@@ -81,31 +61,12 @@ class Landing extends React.Component {
               Calculator
             </Button>
           </div>
-          <div
-            style={{
-              width: '100%',
-              height: '100%',
-              backgroundSize: '90% 90%',
-              backgroundImage: `url("${graph}")`,
-              backgroundRepeat: 'no-repeat',
-            }}
-          />
+          <div style={styles.first.graph} />
         </div>
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'row',
-            padding: 50,
-            alignItems: 'stretch',
-            height: '250',
-          }}
-        >
-          <Card style={{ width: '100%' }}>
+        <div style={styles.second}>
+          <Card style={styles.card}>
             <CardActionArea>
-              <CardMedia
-                image={moodle}
-                style={{ height: 250 }}
-              />
+              <CardMedia image={moodle} style={styles.card.media} />
               <CardContent>
                 <Typography variant="h5">Moodle Hosting</Typography>
               </CardContent>
@@ -116,12 +77,9 @@ class Landing extends React.Component {
               </Link>
             </CardActions>
           </Card>
-          <Card style={{ width: '100%', marginLeft: 50, marginRight: 50 }}>
+          <Card style={{ ...styles.card, marginLeft: 50, marginRight: 50 }}>
             <CardActionArea>
-              <CardMedia
-                image={opigno}
-                style={{ height: 250, backgroundSize: '100% 100%' }}
-              />
+              <CardMedia image={opigno} style={styles.card.media} />
               <CardContent>
                 <Typography variant="h5">Opigno Hosting</Typography>
               </CardContent>
@@ -132,12 +90,9 @@ class Landing extends React.Component {
               </Link>
             </CardActions>
           </Card>
-          <Card style={{ width: '100%' }}>
+          <Card style={styles.card}>
             <CardActionArea>
-              <CardMedia
-                image={learndash}
-                style={{ height: 250 }}
-              />
+              <CardMedia image={learndash} style={styles.card.media} />
               <CardContent>
                 <Typography variant="h5">LearnDash Hosting</Typography>
               </CardContent>
@@ -149,24 +104,9 @@ class Landing extends React.Component {
             </CardActions>
           </Card>
         </div>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            height: 350,
-            alignItems: 'center',
-            padding: 50,
-          }}
-        >
-          <div
-            style={{
-              width: '48%',
-              backgroundImage: `url("${logo}")`,
-              backgroundSize: '100% 100%',
-              height: '100%',
-            }}
-          />
-          <div style={{ width: '100%', paddingLeft: 50, fontSize: '1.5rem' }}>
+        <div style={styles.about}>
+          <div style={styles.about.logo} />
+          <div style={styles.about.paragraph}>
             <p>
               Welcome to SysIT Solutions. With our help teachers, students and
               business professionals from all around the world would be able to
@@ -182,16 +122,9 @@ class Landing extends React.Component {
             </p>
           </div>
         </div>
-        <div
-          style={{
-            padding: 50,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <form style={{ maxWidth: 450, width: '100%' }} onSubmit={this.submit}>
-            <h2 style={{ textAlign: 'center' }}>Send Us a Message</h2>
+        <div style={styles.contact}>
+          <form style={styles.contact.form} onSubmit={this.submit}>
+            <h2 style={styles.contact.title}>Send Us a Message</h2>
             <TextField
               label="email"
               required
@@ -212,7 +145,11 @@ class Landing extends React.Component {
               rows={4}
               onChange={this.change('message')}
             />
-            <Button type="submit" style={{ marginTop: 10 }} variant="outlined">
+            <Button
+              type="submit"
+              style={styles.contact.button}
+              variant="outlined"
+            >
               Send
             </Button>
           </form>
