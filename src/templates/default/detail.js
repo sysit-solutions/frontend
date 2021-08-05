@@ -18,10 +18,11 @@ import {
 // Icons
 import CloseIcon from '@material-ui/icons/Clear'
 import DashboardIcon from '@material-ui/icons/Dashboard'
+import HomeIcon from '@material-ui/icons/Home'
 import LoginIcon from '@material-ui/icons/Input'
 import LogoutIcon from '@material-ui/icons/PowerSettingsNew'
-import ProfileIcon from '@material-ui/icons/AccountCircle'
 import MenuIcon from '@material-ui/icons/Menu'
+import ProfileIcon from '@material-ui/icons/AccountCircle'
 import RoleIcon from '@material-ui/icons/People'
 import UserIcon from '@material-ui/icons/PeopleOutline'
 
@@ -129,9 +130,12 @@ class Template extends React.Component {
         >
           <AppBar
             position="sticky"
-            style={{ display: 'flex', alignItems: 'center', boxShadow: 'none' }}
+            style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', boxShadow: 'none' }}
           >
-            <Toolbar>
+            <Link to="/" style={{ marginLeft: 10 }}>
+              <HomeIcon />
+            </Link>
+            <Toolbar style={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
               <Link to="/hosting">
                 <Button style={{ color: 'white' }}>Hosting</Button>
               </Link>
