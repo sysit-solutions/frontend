@@ -8,10 +8,10 @@ NPM=`which npm 2>/dev/null`
 YARN=`which yarn 2>/dev/null`
 
 
-if [ ! -z "${NPM}" ]; then
-  export PACKAGE_MANAGER="${NPM}"
-else
+if [ ! -z "${YARN}" ]; then
   export PACKAGE_MANAGER="${YARN}"
+else
+  export PACKAGE_MANAGER="${NPM}"
 fi
 
 

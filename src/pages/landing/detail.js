@@ -18,7 +18,7 @@ import store from 'store'
 import moodle from './img/moodle.png'
 import opigno from './img/opigno.png'
 import learndash from './img/learndash.png'
-import styles from './styles'
+import getStyles from './styles'
 
 class Landing extends React.Component {
   state = {
@@ -49,6 +49,7 @@ class Landing extends React.Component {
   }
 
   render() {
+    const styles = getStyles(store.resolution)
     return (
       <Template style={{}}>
         <div style={styles.root}>
@@ -57,8 +58,12 @@ class Landing extends React.Component {
               Offering affordable and reliable open source education hosting
               solutions designed specifically for your needs.
             </p>
-            <Button variant="contained" color="primary">
-              Calculator
+            <Button
+              variant="contained"
+              color="primary"
+              style={styles.first.button}
+            >
+              Pricing
             </Button>
           </div>
           <div style={styles.first.graph} />
