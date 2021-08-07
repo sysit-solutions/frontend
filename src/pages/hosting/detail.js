@@ -51,8 +51,8 @@ class Hosting extends React.Component {
         <div
           style={{
             display: 'grid',
-            gridGap: 30,
-            gridTemplateColumns: 'repeat(3, auto)',
+            gridGap: '1vw',
+            gridTemplateColumns: 'repeat(3, 32%)',
             padding: 50,
           }}
         >
@@ -81,9 +81,153 @@ class Hosting extends React.Component {
             <p>Video archive, search, stream and playlists</p>
           </Paper>
         </div>
+        <h1 style={{ textAlign: 'center', color: '#666', fontSize: '4rem' }}>
+          Server Pricing
+        </h1>
+        <div
+          style={{
+            padding: 50,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, auto)',
+            gridGap: '1vw 1vw',
+            backgroundColor: '#277EAE',
+          }}
+        >
+          <Paper
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 20,
+              flexDirection: 'column',
+            }}
+          >
+            <h2 style={{ fontSize: '3rem' }}>XS</h2>
+            <h3>$10/month</h3>
+            <p>1 CPU</p>
+            <p>1GB RAM</p>
+            <p>1TB Bandwidth</p>
+            <p>25GB Disk</p>
+          </Paper>
+          <Paper
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 20,
+              flexDirection: 'column',
+            }}
+          >
+            <h2 style={{ fontSize: '3rem' }}>S</h2>
+            <h3>$20/month</h3>
+            <p>1 CPU</p>
+            <p>2GB RAM</p>
+            <p>2TB Bandwidth</p>
+            <p>55GB Disk</p>
+          </Paper>
+          <Paper
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 20,
+              flexDirection: 'column',
+            }}
+          >
+            <h2 style={{ fontSize: '3rem' }}>M</h2>
+            <h3>$40/month</h3>
+            <p>2 CPU</p>
+            <p>4GB RAM</p>
+            <p>3TB Bandwidth</p>
+            <p>80GB Disk</p>
+          </Paper>
+          <Paper
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 20,
+              flexDirection: 'column',
+            }}
+          >
+            <h2 style={{ fontSize: '3rem' }}>L</h2>
+            <h3>$80/month</h3>
+            <p>4 CPU</p>
+            <p>8GB RAM</p>
+            <p>4TB Bandwidth</p>
+            <p>160GB Disk</p>
+          </Paper>
+          <Paper
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 20,
+              flexDirection: 'column',
+            }}
+          >
+            <h2 style={{ fontSize: '3rem' }}>XL</h2>
+            <h3>$160/month</h3>
+            <p>6 CPU</p>
+            <p>16GB RAM</p>
+            <p>5TB Bandwidth</p>
+            <p>320GB Disk</p>
+          </Paper>
+          <Paper
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 20,
+              flexDirection: 'column',
+            }}
+          >
+            <h2 style={{ fontSize: '3rem' }}>2XL</h2>
+            <h3>$320/month</h3>
+            <p>8 CPU</p>
+            <p>32GB RAM</p>
+            <p>6TB Bandwidth</p>
+            <p>640GB Disk</p>
+          </Paper>
+          <Paper
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 20,
+              flexDirection: 'column',
+            }}
+          >
+            <h2 style={{ fontSize: '3rem' }}>3XL</h2>
+            <h3>$640/month</h3>
+            <p>16 CPU</p>
+            <p>64GB RAM</p>
+            <p>10TB Bandwidth</p>
+            <p>1.28TB Disk</p>
+          </Paper>
+          <Paper
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              padding: 20,
+              flexDirection: 'column',
+            }}
+          >
+            <h2 style={{ fontSize: '3rem' }}>4XL</h2>
+            <h3>$1280/month</h3>
+            <p>24 CPU</p>
+            <p>96GB RAM</p>
+            <p>15TB Bandwidth</p>
+            <p>1.6TB Disk</p>
+          </Paper>
+        </div>
         <div style={{ padding: 50 }}>
-          Vultr size: 5, 10, 20, 40, 80, 160, 320, 640
-          <h2 style={{ color: '#666666', fontSize: '3rem' }}>Locations</h2>
+          <h2
+            style={{ color: '#666666', fontSize: '4rem', textAlign: 'center' }}
+          >
+            Server Locations
+          </h2>
           <div
             style={{
               display: 'grid',
