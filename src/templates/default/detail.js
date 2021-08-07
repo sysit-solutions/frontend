@@ -133,23 +133,23 @@ class Template extends React.Component {
             style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', boxShadow: 'none' }}
           >
             <Link to="/" style={{ marginLeft: 10 }}>
-              <HomeIcon />
+              <HomeIcon style={{ height: 50, width: 50 }} />
             </Link>
-            <Toolbar style={{ display: 'flex', justifyContent: 'center', flex: 1 }}>
+            <Toolbar style={{ display: 'flex', justifyContent: 'space-around', flex: 1 }}>
               <Link to="/hosting">
-                <Button style={{ color: 'white' }}>Hosting</Button>
+                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Hosting</Button>
               </Link>
               <Link to="/security">
-                <Button style={{ color: 'white' }}>Security</Button>
+                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Security</Button>
               </Link>
               <Link to="/design">
-                <Button style={{ color: 'white' }}>Instructional Design</Button>
+                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Instructional Design</Button>
               </Link>
               <Link to="/content">
-                <Button style={{ color: 'white' }}>Content Creation</Button>
+                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Content Creation</Button>
               </Link>
               <Link to="/pricing">
-                <Button style={{ color: 'white' }}>Pricing</Button>
+                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Pricing</Button>
               </Link>
             </Toolbar>
           </AppBar>

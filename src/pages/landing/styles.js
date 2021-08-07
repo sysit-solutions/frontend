@@ -2,15 +2,14 @@ import graph from './img/hosting.svg'
 import logo from './img/logo.png'
 
 const getStyles = (resolution) => {
-  console.log(resolution.width)
   return {
     root: {
       height: 'calc(100vh - 65px)',
       backgroundColor: '#d5d9ec',
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
-      flexDirection: resolution.width < 1600 ? 'column' : 'row',
+      justifyContent: 'space-around',
+      flexDirection: resolution.width < 1600 ? 'column-reverse' : 'row',
     },
 
     first: {
@@ -27,7 +26,7 @@ const getStyles = (resolution) => {
         height: '100%',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: resolution.width < 1600 ? 'flex-start' : 'center',
         flexDirection: 'column',
         paddingLeft: 50,
         textAlign: 'center',
