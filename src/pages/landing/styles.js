@@ -1,7 +1,7 @@
 import graph from './img/hosting.svg'
-import logo from './img/logo.png'
+import logo from './img/logo.svg'
 
-const getStyles = (resolution) => {
+const getStyles = (resolution, palette) => {
   return {
     root: {
       height: 'calc(100vh - 65px)',
@@ -64,18 +64,32 @@ const getStyles = (resolution) => {
     about: {
       display: 'flex',
       justifyContent: 'center',
-      height: 350,
       alignItems: 'center',
       padding: 50,
 
-      logo: {
+      left: {
         width: '48%',
-        backgroundImage: `url("${logo}")`,
-        backgroundSize: '100% 100%',
         height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        color: palette.primary.main,
       },
 
-      paragraph: {
+      logo: {
+        backgroundSize: '100% 100%',
+        backgroundImage: `url("${logo}")`,
+        width: 300,
+        height: 300,
+      },
+
+      title: {
+        textAlign: 'center',
+        fontSize: '3rem',
+      },
+
+      right: {
         width: '100%',
         paddingLeft: 50,
         fontSize: '1.5rem',

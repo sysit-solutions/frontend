@@ -11,6 +11,7 @@ import {
   Typography,
   CardActions,
   TextField,
+  withTheme,
 } from '@material-ui/core'
 import { errors } from '@freenit-framework/core'
 import Template from 'templates/default/detail'
@@ -49,7 +50,7 @@ class Landing extends React.Component {
   }
 
   render() {
-    const styles = getStyles(store.resolution)
+    const styles = getStyles(store.resolution, this.props.theme.palette)
     return (
       <Template style={{}}>
         <div style={styles.root}>
@@ -79,7 +80,7 @@ class Landing extends React.Component {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Link to="/hosting">
+              <Link to="/moodle">
                 <Button variant="outlined">More</Button>
               </Link>
             </CardActions>
@@ -112,8 +113,11 @@ class Landing extends React.Component {
           </Card>
         </div>
         <div style={styles.about}>
-          <div style={styles.about.logo} />
-          <div style={styles.about.paragraph}>
+          <div style={styles.about.left}>
+            <div style={styles.about.logo} />
+            <p style={styles.about.title}>SysIT Solutions</p>
+          </div>
+          <div style={styles.about.right}>
             <p>
               Welcome to SysIT Solutions. With our help teachers, students and
               business professionals from all around the world would be able to
@@ -166,4 +170,4 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing
+export default withTheme(Landing)

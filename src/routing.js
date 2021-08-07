@@ -3,7 +3,15 @@ import { Switch, Route } from 'react-router-dom'
 
 import { Auth, Profile, NoPage } from '@freenit-framework/core'
 
-import { Dashboard, Landing, Role, User, Hosting, Pricing } from 'pages'
+import {
+  Dashboard,
+  Landing,
+  Role,
+  User,
+  Hosting,
+  Pricing,
+  Products,
+} from 'pages'
 
 const Routing = () => {
   return (
@@ -13,6 +21,7 @@ const Routing = () => {
       <Route exact path="/dashboard" component={Dashboard.Detail} />
       <Route exact path="/hosting" component={Hosting.Detail} />
       <Route exact path="/pricing" component={Pricing.Detail} />
+      <Route exact path="/moodle" component={Products.Moodle} />
       <Route exact path="/login" component={Auth.Login} />
       <Route exact path="/profile" component={Profile.Detail} />
       <Route exact path="/register" component={Auth.Register} />

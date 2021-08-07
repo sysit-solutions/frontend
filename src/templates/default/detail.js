@@ -135,7 +135,7 @@ class Template extends React.Component {
             <Link to="/" style={{ marginLeft: 10 }}>
               <HomeIcon style={{ height: 50, width: 50 }} />
             </Link>
-            <Toolbar style={{ display: 'flex', justifyContent: 'space-around', flex: 1 }}>
+            <Toolbar style={{ display: 'flex', justifyContent: 'space-around', flex: 1, paddingLeft: '10%', paddingRight: '10%' }}>
               <Link to="/hosting">
                 <Button style={{ color: 'white', fontSize: '1.5rem' }}>Hosting</Button>
               </Link>
