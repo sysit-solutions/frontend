@@ -139,9 +139,18 @@ class Template extends React.Component {
               <Link to="/hosting">
                 <Button style={{ color: 'white' }}>Hosting</Button>
               </Link>
-              <Button style={{ color: 'white' }}>Security</Button>
-              <Button style={{ color: 'white' }}>Instructional Design</Button>
-              <Button style={{ color: 'white' }}>Content Creation</Button>
+              <Link to="/security">
+                <Button style={{ color: 'white' }}>Security</Button>
+              </Link>
+              <Link to="/design">
+                <Button style={{ color: 'white' }}>Instructional Design</Button>
+              </Link>
+              <Link to="/content">
+                <Button style={{ color: 'white' }}>Content Creation</Button>
+              </Link>
+              <Link to="/pricing">
+                <Button style={{ color: 'white' }}>Pricing</Button>
+              </Link>
             </Toolbar>
           </AppBar>
           {this.props.children}

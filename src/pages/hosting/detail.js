@@ -1,10 +1,12 @@
 import React from 'react'
+import { withTheme } from '@material-ui/core'
 import { AppBar, Toolbar, Typography, Paper } from '@material-ui/core'
 import Template from 'templates/default/detail'
 import graph from './img/graph.jpg'
 
 class Hosting extends React.Component {
   render() {
+    const { palette } = this.props.theme
     return (
       <Template style={{}}>
         <div
@@ -32,7 +34,7 @@ class Hosting extends React.Component {
         </h1>
         <div
           style={{
-            backgroundColor: '#277EAE',
+            backgroundColor: palette.primary.main,
             color: '#ffffff',
             fontSize: '2rem',
             padding: 50,
@@ -90,7 +92,7 @@ class Hosting extends React.Component {
             display: 'grid',
             gridTemplateColumns: 'repeat(4, auto)',
             gridGap: '1vw 1vw',
-            backgroundColor: '#277EAE',
+            backgroundColor: palette.primary.main,
           }}
         >
           <Paper
@@ -322,4 +324,4 @@ class Hosting extends React.Component {
   }
 }
 
-export default Hosting
+export default withTheme(Hosting)

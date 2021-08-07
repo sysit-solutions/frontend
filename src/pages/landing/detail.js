@@ -58,13 +58,15 @@ class Landing extends React.Component {
               Offering affordable and reliable open source education hosting
               solutions designed specifically for your needs.
             </p>
-            <Button
-              variant="contained"
-              color="primary"
-              style={styles.first.button}
-            >
-              Pricing
-            </Button>
+            <Link to="/pricing">
+              <Button
+                variant="contained"
+                color="primary"
+                style={styles.first.button}
+              >
+                Pricing
+              </Button>
+            </Link>
           </div>
           <div style={styles.first.graph} />
         </div>

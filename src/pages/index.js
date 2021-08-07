@@ -1,5 +1,6 @@
 export { default as Dashboard } from './dashboard'
 export { default as Hosting } from './hosting'
 export { default as Landing } from './landing'
+export { default as Pricing } from './pricing'
 export { default as Role } from './role'
 export { default as User } from './user'
