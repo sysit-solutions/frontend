@@ -26,6 +26,20 @@ class Landing extends React.Component {
     email: '',
     subject: '',
     message: '',
+    height: window.innerHeight,
+    width: window.innerWidth,
+  }
+
+  constructor(props) {
+    super(props)
+    window.onresize = this.resize
+  }
+
+  resize = () => {
+    this.setState({
+      height: window.innerHeight,
+      width: window.innerWidth,
+    })
   }
 
   change = (field) => (event) => {
@@ -50,7 +64,8 @@ class Landing extends React.Component {
   }
 
   render() {
-    const styles = getStyles(store.resolution, this.props.theme.palette)
+    const { height, width } = this.state
+    const styles = getStyles({ height, width }, this.props.theme.palette)
     return (
       <Template style={{}}>
         <div style={styles.root}>
@@ -80,7 +95,7 @@ class Landing extends React.Component {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Link to="/moodle">
+              <Link to="/products/moodle">
                 <Button variant="outlined">More</Button>
               </Link>
             </CardActions>

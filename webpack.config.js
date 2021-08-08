@@ -7,7 +7,11 @@ const defaultConfig = config.webpack(__dirname)
 const myconfig = {
   plugins: [
     ...defaultConfig.plugins,
-    new HtmlPlugin({ favicon: 'favicon.ico', template: 'index.html' }),
+    new HtmlPlugin({
+      favicon: 'favicon.ico',
+      template: 'index.html',
+      publicPath: '/',
+    }),
   ],
 }
 
