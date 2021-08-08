@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react'
 import { Link } from 'react-router-dom'
 import {
   AppBar,
@@ -26,20 +27,6 @@ class Landing extends React.Component {
     email: '',
     subject: '',
     message: '',
-    height: window.innerHeight,
-    width: window.innerWidth,
-  }
-
-  constructor(props) {
-    super(props)
-    window.onresize = this.resize
-  }
-
-  resize = () => {
-    this.setState({
-      height: window.innerHeight,
-      width: window.innerWidth,
-    })
   }
 
   change = (field) => (event) => {
@@ -64,7 +51,7 @@ class Landing extends React.Component {
   }
 
   render() {
-    const { height, width } = this.state
+    const { height, width } = store.resolution
     const styles = getStyles({ height, width }, this.props.theme.palette)
     return (
       <Template style={{}}>
@@ -185,4 +172,4 @@ class Landing extends React.Component {
   }
 }
 
-export default withTheme(Landing)
+export default withTheme(observer(Landing))

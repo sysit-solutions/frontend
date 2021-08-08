@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react'
 import { Link } from 'react-router-dom'
 import { EmptyTemplate } from '@freenit-framework/core'
 import store from 'store'
@@ -25,12 +26,18 @@ import MenuIcon from '@material-ui/icons/Menu'
 import ProfileIcon from '@material-ui/icons/AccountCircle'
 import RoleIcon from '@material-ui/icons/People'
 import UserIcon from '@material-ui/icons/PeopleOutline'
+import HamburgerIcon from '@material-ui/icons/Reorder'
 
 import styles from './styles'
 
 class Template extends React.Component {
   state = {
     showMenu: false,
+  }
+
+  constructor(props) {
+    super(props)
+    window.onresize = store.resolution.resize
   }
 
   handleLogout = async () => {
@@ -122,6 +129,37 @@ class Template extends React.Component {
         ]
       : null
     const BarLinks = resolution.width > 410 ? <div>{AuthButton}</div> : null
+    const fontSize = resolution.width < 1200 ? '1.5rem' : null
+    const justifyContent = resolution.width < 1200 ? 'space-around' : 'center'
+    const iconStyle = resolution.width < 1200 ? { height: 50, width: 50 } : null
+    const menuItems =
+      resolution.width > 600
+        ? [
+            <Link to="/hosting">
+              <Button style={{ color: 'white', fontSize }}>Hosting</Button>
+            </Link>,
+            <Link to="/security">
+              <Button style={{ color: 'white', fontSize }}>Security</Button>
+            </Link>,
+            <Link to="/design">
+              <Button style={{ color: 'white', fontSize }}>
+                Instructional Design
+              </Button>
+            </Link>,
+            <Link to="/content">
+              <Button style={{ color: 'white', fontSize }}>
+                Content Creation
+              </Button>
+            </Link>,
+            <Link to="/pricing">
+              <Button style={{ color: 'white', fontSize }}>Pricing</Button>
+            </Link>,
+          ]
+        : null
+    const hamburger =
+      resolution.width < 600 ? (
+        <HamburgerIcon style={iconStyle} onClick={this.handleMenuOpen} />
+      ) : null
     return (
       <div>
         <EmptyTemplate.Detail
@@ -130,31 +168,35 @@ class Template extends React.Component {
         >
           <AppBar
             position="sticky"
-            style={{ display: 'flex', alignItems: 'center', flexDirection: 'row', boxShadow: 'none' }}
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              flexDirection: 'row',
+              boxShadow: 'none',
+            }}
           >
             <Link to="/" style={{ marginLeft: 10 }}>
-              <HomeIcon style={{ height: 50, width: 50 }} />
+              <HomeIcon style={iconStyle} />
             </Link>
-            <Toolbar style={{ display: 'flex', justifyContent: 'space-around', flex: 1, paddingLeft: '10%', paddingRight: '10%' }}>
-              <Link to="/hosting">
-                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Hosting</Button>
-              </Link>
-              <Link to="/security">
-                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Security</Button>
-              </Link>
-              <Link to="/design">
-                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Instructional Design</Button>
-              </Link>
-              <Link to="/content">
-                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Content Creation</Button>
-              </Link>
-              <Link to="/pricing">
-                <Button style={{ color: 'white', fontSize: '1.5rem' }}>Pricing</Button>
-              </Link>
+            <Toolbar
+              style={{
+                display: 'flex',
+                justifyContent,
+                flex: 1,
+                paddingLeft: '10%',
+                paddingRight: '10%',
+              }}
+            >
+              {menuItems}
             </Toolbar>
+            {hamburger}
           </AppBar>
           {this.props.children}
-          <Drawer open={this.state.showMenu} onClose={this.handleMenuClose}>
+          <Drawer
+            open={this.state.showMenu}
+            onClose={this.handleMenuClose}
+            anchor="right"
+          >
             <AppBar position="static">
               <Toolbar>
                 <Typography variant="h5" color="inherit" style={styles.flex}>
@@ -197,4 +239,4 @@ class Template extends React.Component {
   }
 }
 
-export default Template
+export default observer(Template)
