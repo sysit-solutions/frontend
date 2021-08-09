@@ -95,7 +95,7 @@ class Landing extends React.Component {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Link to="/hosting">
+              <Link to="/products/opigno">
                 <Button variant="outlined">More</Button>
               </Link>
             </CardActions>
@@ -108,7 +108,7 @@ class Landing extends React.Component {
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Link to="/hosting">
+              <Link to="/products/learndash">
                 <Button variant="outlined">More</Button>
               </Link>
             </CardActions>

@@ -22,6 +22,8 @@ const Routing = () => {
       <Route exact path="/hosting" component={Hosting.Detail} />
       <Route exact path="/pricing" component={Pricing.Detail} />
       <Route exact path="/products/moodle" component={Products.Moodle} />
+      <Route exact path="/products/learndash" component={Products.LearnDash} />
+      <Route exact path="/products/opigno" component={Products.Opigno} />
       <Route exact path="/login" component={Auth.Login} />
       <Route exact path="/profile" component={Profile.Detail} />
       <Route exact path="/register" component={Auth.Register} />
