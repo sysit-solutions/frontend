@@ -9,7 +9,7 @@ const getStyles = (resolution, palette) => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-around',
-      flexDirection: resolution.width < 1600 ? 'column-reverse' : 'row',
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
     },
 
     first: {
@@ -26,7 +26,7 @@ const getStyles = (resolution, palette) => {
         height: '100%',
         display: 'flex',
         alignItems: 'center',
-        justifyContent: resolution.width < 1600 ? 'flex-start' : 'center',
+        justifyContent: resolution.width < 1200 ? 'flex-start' : 'center',
         flexDirection: 'column',
         paddingLeft: 50,
         textAlign: 'center',
@@ -39,9 +39,9 @@ const getStyles = (resolution, palette) => {
       },
 
       button: {
-        height: 100,
-        width: 200,
-        fontSize: '2rem',
+        height: 70,
+        width: 150,
+        fontSize: '1.5rem',
       },
     },
 
