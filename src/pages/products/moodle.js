@@ -20,11 +20,15 @@ class Moodle extends React.Component {
         >
           <p
             style={{
-              fontSize: '3.5rem',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '3rem',
               width: '50%',
               color: '#666',
               marginRight: 50,
               flex: 1,
+              padding: 30,
             }}
           >
             Online courses can be so much more than just video and text. With
@@ -33,7 +37,9 @@ class Moodle extends React.Component {
           </p>
           <div
             style={{
-              backgroundSize: '100% 100%',
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
               height: 500,
               width: '50%',
               backgroundImage: `url("${moodle}")`,
@@ -75,7 +81,9 @@ class Moodle extends React.Component {
           <div
             style={{
               width: '50%',
-              backgroundSize: '100% 100%',
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
               backgroundImage: `url("${learning}")`,
             }}
           />
@@ -136,7 +144,9 @@ class Moodle extends React.Component {
           <div
             style={{
               width: '50%',
-              backgroundSize: '100% 100%',
+              backgroundSize: 'contain',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
               backgroundImage: `url("${moodle2}")`,
             }}
           />
