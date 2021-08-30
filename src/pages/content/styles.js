@@ -1,5 +1,4 @@
 import moodle from './img/moodle.png'
-import moodle2 from './img/moodle2.png'
 import learning from './img/learning.png'
 
 const getStyles = (palette) => {
@@ -37,39 +36,51 @@ const getStyles = (palette) => {
       fontSize: '4rem',
 
       explanation: {
-        color: 'white',
         fontSize: '2rem',
         padding: 80,
         paddingTop: 100,
         paddingBottom: 100,
-        backgroundColor: palette.primary.main,
       },
     },
 
-    how: {
+    why: {
       textAlign: 'center',
       color: '#666',
       fontSize: '4rem',
-      marginTop: 100,
-
       explanation: {
+        backgroundColor: palette.primary.main,
+        color: '#ffffff',
         fontSize: '2rem',
         padding: 80,
-        paddingTop: 0,
+        paddingTop: 100,
         paddingBottom: 100,
       },
+    },
+
+    learn: {
+      padding: 50,
+      display: 'flex',
+      alignItems: 'strertch',
+      justifyContent: 'center',
+      height: '20vw',
 
       picture: {
         width: '50%',
-        backgroundSize: '100% 100%',
+        backgroundSize: 'contain',
         backgroundImage: `url("${learning}")`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
       },
 
-      content: {
-        display: 'flex',
-        alignItems: 'center',
+      text: {
         width: '50%',
         paddingLeft: 20,
+        display: 'flex',
+        alignItems: 'center',
+      },
+
+      paragraph: {
+        fontSize: '1.5rem',
       },
     },
 
@@ -88,20 +99,10 @@ const getStyles = (palette) => {
 
       inner: {
         padding: 50,
-        width: '50%',
         display: 'flex',
         alignItems: 'stretch',
         justifyContent: 'center',
         flexDirection: 'column',
-      },
-
-      picture: {
-        width: '50%',
-        height: 500,
-        backgroundSize: 'contain',
-        backgroundImage: `url("${moodle2}")`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
       },
     },
 

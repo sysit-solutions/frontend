@@ -135,23 +135,23 @@ class Template extends React.Component {
     const menuItems =
       resolution.width > 600
         ? [
-            <Link to="/hosting">
+            <Link to="/hosting" key="hosting">
               <Button style={{ color: 'white', fontSize }}>Hosting</Button>
             </Link>,
-            <Link to="/security">
+            <Link to="/security" key="security">
               <Button style={{ color: 'white', fontSize }}>Security</Button>
             </Link>,
-            <Link to="/design">
+            <Link to="/design" key="design">
               <Button style={{ color: 'white', fontSize }}>
                 Instructional Design
               </Button>
             </Link>,
-            <Link to="/content">
+            <Link to="/content" key="content">
               <Button style={{ color: 'white', fontSize }}>
                 Content Creation
               </Button>
             </Link>,
-            <Link to="/pricing">
+            <Link to="/pricing" key="pricing">
               <Button style={{ color: 'white', fontSize }}>Pricing</Button>
             </Link>,
           ]

@@ -1,7 +1,7 @@
 import Detail from './detail'
 
-const security = {
+const content = {
   Detail,
 }
 
-export default security
+export default content
