@@ -1,5 +1,5 @@
-import moodle from './img/moodle.png'
-import learning from './img/learning.png'
+import design from './img/design.svg'
+import design2 from './img/design2.png'
 
 const getStyles = (palette) => {
   return {
@@ -24,7 +24,7 @@ const getStyles = (palette) => {
         flex: 1,
         height: 500,
         width: '50%',
-        backgroundImage: `url("${moodle}")`,
+        backgroundImage: `url("${design}")`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -67,7 +67,7 @@ const getStyles = (palette) => {
       picture: {
         width: '50%',
         backgroundSize: 'contain',
-        backgroundImage: `url("${learning}")`,
+        backgroundImage: `url("${design2}")`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
       },
