@@ -5,12 +5,13 @@ const getStyles = (palette) => {
   return {
     above: {
       padding: 50,
+      paddingTop: 0,
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'stretch',
 
       message: {
-        fontSize: '3rem',
+        fontSize: '2rem',
         width: '50%',
         color: '#666',
         marginRight: 50,
@@ -22,7 +23,7 @@ const getStyles = (palette) => {
 
       picture: {
         flex: 1,
-        height: 500,
+        height: 600,
         width: '50%',
         backgroundImage: `url("${design}")`,
         backgroundSize: 'contain',
@@ -47,6 +48,7 @@ const getStyles = (palette) => {
       textAlign: 'center',
       color: '#666',
       fontSize: '4rem',
+      padding: 50,
       explanation: {
         backgroundColor: palette.primary.main,
         color: '#ffffff',
@@ -60,9 +62,9 @@ const getStyles = (palette) => {
     learn: {
       padding: 50,
       display: 'flex',
-      alignItems: 'strertch',
+      alignItems: 'stretch',
       justifyContent: 'center',
-      height: '20vw',
+      minHeight: '20vw',
 
       picture: {
         width: '50%',

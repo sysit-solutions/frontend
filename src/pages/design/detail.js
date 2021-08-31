@@ -34,7 +34,7 @@ class Design extends React.Component {
           expertise in instructional theory, multimedia production, gamification
           techniques and more - all with one goal: making learning better!
         </div>
-        <h1 style={styles.why}>Why do you need Instructional Designer?</h1>
+        <h1 style={styles.why}>Why do you need an Instructional Designer?</h1>
         <div style={styles.why.explanation}>
           If you are an expert in your field or need somebody to help you
           systematize your thoughts, then instructional design might be for you.
