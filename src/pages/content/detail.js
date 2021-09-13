@@ -51,11 +51,9 @@ class Page extends React.Component {
             <Button style={styles.toolbar.button}>H5P content</Button>
           </Link>
         </Toolbar>
-        <div style={styles.curriculum}>
+        <div style={styles.curriculum} id="curriculum">
           <div style={styles.curriculum.text}>
-            <h2 style={styles.curriculum.title} id="curriculum">
-              Curriculum Writing
-            </h2>
+            <h2 style={styles.curriculum.title}>Curriculum Writing</h2>
             <p>
               The use of an innovative curriculum in eLearning is an integral
               part of every course creation process. Curriculum writing can be a
@@ -80,12 +78,10 @@ class Page extends React.Component {
           </div>
           <div style={styles.curriculum.image} />
         </div>
-        <div style={styles.video}>
+        <div style={styles.video} id="video">
           <div style={styles.video.image} />
           <div style={styles.video.text}>
-            <h2 style={styles.video.title} id="video">
-              Video Recording & Editing
-            </h2>
+            <h2 style={styles.video.title}>Video Recording & Editing</h2>
             <p style={styles.video.paragraph}>
               Do you have an idea for a course but don't want to be in front of
               the camera? We got you covered. With our solution, you can focus
@@ -105,11 +101,9 @@ class Page extends React.Component {
             </div>
           </div>
         </div>
-        <div style={styles.sound}>
+        <div style={styles.sound} id="sound">
           <div style={styles.sound.text}>
-            <h2 style={styles.sound.title} id="sound">
-              Sound Recording & Editing
-            </h2>
+            <h2 style={styles.sound.title}>Sound Recording & Editing</h2>
             <p style={styles.sound.paragraph}>
               It is essential for educators to take advantage of available
               multimedia tools to engage learners and make courses more
@@ -134,12 +128,10 @@ class Page extends React.Component {
           </div>
           <div style={styles.sound.image} />
         </div>
-        <div style={styles.scorm}>
+        <div style={styles.scorm} id="scorm">
           <div style={styles.scorm.image} />
           <div style={styles.scorm.text}>
-            <h2 style={styles.scorm.title} id="scorm">
-              SCORM development
-            </h2>
+            <h2 style={styles.scorm.title}>SCORM development</h2>
             <p style={styles.scorm.paragraph}>
               The best way to create an engaging online course is by
               implementing SCORM, which stands for Shareable Content Object
@@ -163,11 +155,9 @@ class Page extends React.Component {
             </div>
           </div>
         </div>
-        <div style={styles.blog}>
+        <div style={styles.blog} id="blog">
           <div style={styles.blog.text}>
-            <h2 style={styles.blog.title} id="blog">
-              Blog Writing
-            </h2>
+            <h2 style={styles.blog.title}>Blog Writing</h2>
             <p style={styles.blog.paragraph}>
               You may be thinking, "why do I need a blog post for my online
               course?" Blog posts are the perfect way to engage your audience.
@@ -189,12 +179,10 @@ class Page extends React.Component {
           </div>
           <div style={styles.blog.image} />
         </div>
-        <div style={styles.h5p}>
+        <div style={styles.h5p} id="h5p">
           <div style={styles.h5p.image} />
           <div style={styles.h5p.text}>
-            <h2 style={styles.h5p.title} id="h5p">
-              H5P content
-            </h2>
+            <h2 style={styles.h5p.title}>H5P content</h2>
             <p style={styles.h5p.paragraph}>
               Every day, educators are trying to find innovative ways to make
               their courses more engaging. One way you can do this is by adding
