@@ -1,123 +1,169 @@
-import moodle from './img/moodle.png'
-import learning from './img/learning.png'
+const root = {
+  display: 'flex',
+  alignItems: 'stretch',
+  justifyContent: 'center',
+  minHeight: '100vh',
+}
+
+const background = {
+  width: '50%',
+  backgroundSize: 'contain',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+}
+
+const text = {
+  width: '50%',
+  padding: 20,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  justifyContent: 'center',
+}
 
 const getStyles = (palette) => {
   return {
     above: {
-      padding: 50,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'stretch',
+      ...root,
+      text,
+      title: { textAlign: 'right' },
 
-      message: {
-        fontSize: '3rem',
-        width: '50%',
-        color: '#666',
-        marginRight: 50,
-        flex: 1,
-        display: 'flex',
-        alignItems: 'center',
-        padding: 30,
-      },
-
-      picture: {
-        flex: 1,
-        height: 500,
-        width: '50%',
-        backgroundImage: `url("${moodle}")`,
-        backgroundSize: 'contain',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-      },
-    },
-    what: {
-      textAlign: 'center',
-      color: '#666',
-      fontSize: '4rem',
-
-      explanation: {
-        fontSize: '2rem',
-        padding: 80,
-        paddingTop: 100,
-        paddingBottom: 100,
-      },
-    },
-
-    why: {
-      textAlign: 'center',
-      color: '#666',
-      fontSize: '4rem',
-      explanation: {
-        backgroundColor: palette.primary.main,
-        color: '#ffffff',
-        fontSize: '2rem',
-        padding: 80,
-        paddingTop: 100,
-        paddingBottom: 100,
-      },
-    },
-
-    learn: {
-      padding: 50,
-      display: 'flex',
-      alignItems: 'strertch',
-      justifyContent: 'center',
-      height: '20vw',
-
-      picture: {
-        width: '50%',
-        backgroundSize: 'contain',
-        backgroundImage: `url("${learning}")`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-      },
-
-      text: {
-        width: '50%',
-        paddingLeft: 20,
-        display: 'flex',
-        alignItems: 'center',
+      image: {
+        ...background,
+        backgroundImage:
+          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e3b61407628f47d411_canvas-promo.jpg")',
       },
 
       paragraph: {
-        fontSize: '1.5rem',
-      },
-    },
-
-    help: {
-      title: {
-        textAlign: 'center',
-        color: '#666',
-        fontSize: '4rem',
+        textAlign: 'right',
+        width: '100%',
       },
 
-      content: {
+      button: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
       },
-
-      inner: {
-        padding: 50,
-        display: 'flex',
-        alignItems: 'stretch',
-        justifyContent: 'center',
-        flexDirection: 'column',
-      },
     },
 
-    pricing: {
+    toolbar: {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      padding: 50,
-      paddingBottom: 0,
+      backgroundColor: '#f4f8f9',
+      button: { color: '#727b92' },
+    },
 
-      button: {
-        height: 50,
-        width: 100,
-        marginBottom: 20,
-        fontWeight: 'bold',
+    curriculum: {
+      ...root,
+      text,
+      title: { width: '100%' },
+      pricing: { width: '100%' },
+      button: { marginBottom: 20 },
+
+      image: {
+        ...background,
+        backgroundImage:
+          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e355a57e37939164c9_blog_articles.jpg")',
+      },
+    },
+
+    video: {
+      ...root,
+      text,
+      paragraph: { textAlign: 'right' },
+      button: { marginBottom: 20 },
+
+      image: {
+        ...background,
+        backgroundImage:
+          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e33583f540683ea1e9_landing_page.jpg")',
+      },
+
+      title: {
+        textAlign: 'right',
+        width: '100%',
+      },
+
+      pricing: {
+        width: '100%',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'flex-end',
+      },
+    },
+
+    sound: {
+      ...root,
+      text,
+      title: { width: '100%' },
+      paragraph: { width: '100%' },
+      pricing: { width: '100%' },
+      button: { marginBottom: 20 },
+
+      image: {
+        ...background,
+        backgroundImage:
+          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e3c11b33d073f071a4_newsletters.jpg")',
+      },
+    },
+
+    scorm: {
+      ...root,
+      text,
+      button: { marginBottom: 20 },
+
+      image: {
+        ...background,
+        backgroundImage:
+          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e475add137fc75c5c6_social_media.jpg")',
+      },
+
+      title: {
+        textAlign: 'right',
+        width: '100%',
+      },
+
+      paragraph: {
+        textAlign: 'right',
+        width: '100%',
+      },
+    },
+
+    blog: {
+      ...root,
+      text,
+      title: { width: '100%' },
+      paragraph: { width: '100%' },
+      pricing: { width: '100%' },
+      button: { marginBottom: 20 },
+
+      image: {
+        ...background,
+        backgroundImage:
+          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e3c11b33d073f071a4_newsletters.jpg")',
+      },
+    },
+
+    h5p: {
+      ...root,
+      text,
+      button: { marginBottom: 20 },
+
+      image: {
+        ...background,
+        backgroundImage:
+          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e475add137fc75c5c6_social_media.jpg")',
+      },
+
+      title: {
+        textAlign: 'right',
+        width: '100%',
+      },
+
+      paragraph: {
+        textAlign: 'right',
+        width: '100%',
       },
     },
   }

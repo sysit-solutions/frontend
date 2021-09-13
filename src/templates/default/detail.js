@@ -161,11 +161,8 @@ class Template extends React.Component {
         <HamburgerIcon style={iconStyle} onClick={this.handleMenuOpen} />
       ) : null
     return (
-      <div>
-        <EmptyTemplate.Detail
-          secure={this.props.secure}
-          style={this.props.style}
-        >
+      <EmptyTemplate.Detail secure={this.props.secure}>
+        <div style={this.props.style}>
           <AppBar
             position="sticky"
             style={{
@@ -233,8 +230,8 @@ class Template extends React.Component {
           >
             2021 SysIT LLC
           </div>
-        </EmptyTemplate.Detail>
-      </div>
+        </div>
+      </EmptyTemplate.Detail>
     )
   }
 }
