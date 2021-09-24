@@ -1,9 +1,6 @@
-const root = {
-  display: 'flex',
-  alignItems: 'stretch',
-  justifyContent: 'center',
-  minHeight: '100vh',
-}
+import paper from './img/paper.png'
+import search from './img/search.png'
+import mobile from './img/mobile.png'
 
 const background = {
   width: '50%',
@@ -21,28 +18,48 @@ const text = {
   justifyContent: 'center',
 }
 
-const getStyles = (palette) => {
+const getStyles = (palette, resolution) => {
+  const root = {
+    display: 'flex',
+    alignItems: 'stretch',
+    justifyContent: 'center',
+    minHeight: resolution.width < 1200 ? null : '100vh',
+  }
+
   return {
     above: {
       ...root,
-      text,
-      title: { textAlign: 'right' },
+      flexDirection: resolution.width < 1200 ? 'column' : 'row',
+
+      text: {
+        ...text,
+        width: resolution.width < 1200 ? '100%' : '50%',
+        padding: resolution.width < 1200 ? null : 20,
+      },
+
+      title: {
+        textAlign: resolution.width < 1200 ? 'center' : 'right',
+      },
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e3b61407628f47d411_canvas-promo.jpg")',
+        marginTop: resolution.width < 1200 ? 0 : 150,
+        marginBottom: resolution.width < 1200 ? 0 : 150,
+        backgroundImage: `url("${paper}")`,
+        width: resolution.width < 1200 ? '100%' : '50%',
+        height: resolution.width < 1200 ? 800 : null,
       },
 
       paragraph: {
-        textAlign: 'right',
         width: '100%',
+        textAlign: resolution.width < 1200 ? 'center' : 'right',
       },
 
       button: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        marginBottom: resolution.width < 1200 ? 50 : null,
       },
     },
 
@@ -56,15 +73,22 @@ const getStyles = (palette) => {
 
     curriculum: {
       ...root,
-      text,
+      flexDirection: resolution.width < 1200 ? 'column' : 'row',
+
+      text: {
+        ...text,
+        width: resolution.width < 1200 ? null : '50%',
+      },
+
       title: { width: '100%' },
       pricing: { width: '100%' },
       button: { marginBottom: 20 },
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e355a57e37939164c9_blog_articles.jpg")',
+        backgroundImage: `url("${search}")`,
+        width: resolution.width < 1200 ? '100%' : '50%',
+        height: resolution.width < 1200 ? 500 : null,
       },
     },
 
@@ -140,8 +164,7 @@ const getStyles = (palette) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e3c11b33d073f071a4_newsletters.jpg")',
+        backgroundImage: `url("${mobile}")`,
       },
     },
 

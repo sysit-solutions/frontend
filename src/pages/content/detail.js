@@ -1,11 +1,14 @@
 import React from 'react'
+import { observer } from 'mobx-react'
 import { withTheme, Button, Toolbar, Link } from '@material-ui/core'
 import Template from 'templates/default/detail'
 import getStyles from './styles'
+import store from 'store'
 
 class Page extends React.Component {
   render() {
-    const styles = getStyles(this.props.theme.palette)
+    console.log(store.resolution)
+    const styles = getStyles(this.props.theme.palette, store.resolution)
     return (
       <Template>
         <div style={styles.above}>
@@ -209,4 +212,4 @@ class Page extends React.Component {
   }
 }
 
-export default withTheme(Page)
+export default withTheme(observer(Page))
