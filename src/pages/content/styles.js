@@ -123,6 +123,8 @@ const getStyles = (palette, resolution) => {
       image: {
         ...background,
         backgroundImage: `url("${sound}")`,
+        marginTop: resolution.width < 1200 ? 0 : 80,
+        marginBottom: resolution.width < 1200 ? 0 : 80,
       },
     },
 
@@ -172,6 +174,8 @@ const getStyles = (palette, resolution) => {
       image: {
         ...background,
         backgroundImage: `url("${h5p}")`,
+        marginLeft: resolution.width < 1200 ? 0 : 50,
+        marginRight: resolution.width < 1200 ? 0 : 50,
       },
 
       title: {
