@@ -1,22 +1,8 @@
 import paper from './img/paper.png'
-import search from './img/search.png'
-import mobile from './img/mobile.png'
-
-const background = {
-  width: '50%',
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
-}
-
-const text = {
-  width: '50%',
-  padding: 20,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-}
+import blog from './img/blog.png'
+import sound from './img/sound.png'
+import curiculum from './img/curiculum.png'
+import h5p from './img/h5p.svg'
 
 const getStyles = (palette, resolution) => {
   const root = {
@@ -24,18 +10,33 @@ const getStyles = (palette, resolution) => {
     alignItems: 'stretch',
     justifyContent: 'center',
     minHeight: resolution.width < 1200 ? null : '100vh',
+    flexDirection: resolution.width < 1200 ? 'column' : 'row',
+  }
+
+  const background = {
+    width: '50%',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    width: resolution.width < 1200 ? '100%' : '50%',
+    height: resolution.width < 1200 ? 500 : null,
+  }
+
+  const text = {
+    width: '50%',
+    padding: 20,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: resolution.width < 1200 ? null : '50%',
   }
 
   return {
     above: {
       ...root,
-      flexDirection: resolution.width < 1200 ? 'column' : 'row',
 
-      text: {
-        ...text,
-        width: resolution.width < 1200 ? '100%' : '50%',
-        padding: resolution.width < 1200 ? null : 20,
-      },
+      text,
 
       title: {
         textAlign: resolution.width < 1200 ? 'center' : 'right',
@@ -46,8 +47,6 @@ const getStyles = (palette, resolution) => {
         marginTop: resolution.width < 1200 ? 0 : 150,
         marginBottom: resolution.width < 1200 ? 0 : 150,
         backgroundImage: `url("${paper}")`,
-        width: resolution.width < 1200 ? '100%' : '50%',
-        height: resolution.width < 1200 ? 800 : null,
       },
 
       paragraph: {
@@ -73,22 +72,16 @@ const getStyles = (palette, resolution) => {
 
     curriculum: {
       ...root,
-      flexDirection: resolution.width < 1200 ? 'column' : 'row',
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
 
-      text: {
-        ...text,
-        width: resolution.width < 1200 ? null : '50%',
-      },
-
+      text,
       title: { width: '100%' },
       pricing: { width: '100%' },
       button: { marginBottom: 20 },
 
       image: {
         ...background,
-        backgroundImage: `url("${search}")`,
-        width: resolution.width < 1200 ? '100%' : '50%',
-        height: resolution.width < 1200 ? 500 : null,
+        backgroundImage: `url("${curiculum}")`,
       },
     },
 
@@ -119,6 +112,8 @@ const getStyles = (palette, resolution) => {
 
     sound: {
       ...root,
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
+
       text,
       title: { width: '100%' },
       paragraph: { width: '100%' },
@@ -127,8 +122,7 @@ const getStyles = (palette, resolution) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e3c11b33d073f071a4_newsletters.jpg")',
+        backgroundImage: `url("${sound}")`,
       },
     },
 
@@ -156,6 +150,8 @@ const getStyles = (palette, resolution) => {
 
     blog: {
       ...root,
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
+
       text,
       title: { width: '100%' },
       paragraph: { width: '100%' },
@@ -164,7 +160,7 @@ const getStyles = (palette, resolution) => {
 
       image: {
         ...background,
-        backgroundImage: `url("${mobile}")`,
+        backgroundImage: `url("${blog}")`,
       },
     },
 
@@ -175,8 +171,7 @@ const getStyles = (palette, resolution) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e475add137fc75c5c6_social_media.jpg")',
+        backgroundImage: `url("${h5p}")`,
       },
 
       title: {
