@@ -1,48 +1,64 @@
-const root = {
-  display: 'flex',
-  alignItems: 'stretch',
-  justifyContent: 'center',
-  minHeight: '100vh',
-}
+import paper from './img/paper.png'
+import blog from './img/blog.png'
+import sound from './img/sound.png'
+import curiculum from './img/curiculum.png'
+import h5p from './img/h5p.svg'
 
-const background = {
-  width: '50%',
-  backgroundSize: 'contain',
-  backgroundRepeat: 'no-repeat',
-  backgroundPosition: 'center',
-}
+const getStyles = (palette, resolution) => {
+  const root = {
+    display: 'flex',
+    alignItems: 'stretch',
+    justifyContent: 'center',
+    minHeight: resolution.width < 1200 ? null : '100vh',
+    flexDirection: resolution.width < 1200 ? 'column' : 'row',
+  }
 
-const text = {
-  width: '50%',
-  padding: 20,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-}
+  const background = {
+    width: '50%',
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    width: resolution.width < 1200 ? '100%' : '50%',
+    height: resolution.width < 1200 ? 500 : null,
+  }
 
-const getStyles = (palette) => {
+  const text = {
+    width: '50%',
+    padding: 20,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: resolution.width < 1200 ? null : '50%',
+  }
+
   return {
     above: {
       ...root,
+
       text,
-      title: { textAlign: 'right' },
+
+      title: {
+        textAlign: resolution.width < 1200 ? 'center' : 'right',
+      },
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e3b61407628f47d411_canvas-promo.jpg")',
+        marginTop: resolution.width < 1200 ? 0 : 150,
+        marginBottom: resolution.width < 1200 ? 0 : 150,
+        backgroundImage: `url("${paper}")`,
       },
 
       paragraph: {
-        textAlign: 'right',
         width: '100%',
+        textAlign: resolution.width < 1200 ? 'center' : 'right',
       },
 
       button: {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        marginBottom: resolution.width < 1200 ? 50 : null,
       },
     },
 
@@ -56,6 +72,8 @@ const getStyles = (palette) => {
 
     curriculum: {
       ...root,
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
+
       text,
       title: { width: '100%' },
       pricing: { width: '100%' },
@@ -63,8 +81,7 @@ const getStyles = (palette) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e355a57e37939164c9_blog_articles.jpg")',
+        backgroundImage: `url("${curiculum}")`,
       },
     },
 
@@ -95,6 +112,8 @@ const getStyles = (palette) => {
 
     sound: {
       ...root,
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
+
       text,
       title: { width: '100%' },
       paragraph: { width: '100%' },
@@ -103,8 +122,9 @@ const getStyles = (palette) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e3c11b33d073f071a4_newsletters.jpg")',
+        backgroundImage: `url("${sound}")`,
+        marginTop: resolution.width < 1200 ? 0 : 80,
+        marginBottom: resolution.width < 1200 ? 0 : 80,
       },
     },
 
@@ -132,6 +152,8 @@ const getStyles = (palette) => {
 
     blog: {
       ...root,
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
+
       text,
       title: { width: '100%' },
       paragraph: { width: '100%' },
@@ -140,8 +162,7 @@ const getStyles = (palette) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e3c11b33d073f071a4_newsletters.jpg")',
+        backgroundImage: `url("${blog}")`,
       },
     },
 
@@ -152,8 +173,9 @@ const getStyles = (palette) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e475add137fc75c5c6_social_media.jpg")',
+        backgroundImage: `url("${h5p}")`,
+        marginLeft: resolution.width < 1200 ? 0 : 50,
+        marginRight: resolution.width < 1200 ? 0 : 50,
       },
 
       title: {
