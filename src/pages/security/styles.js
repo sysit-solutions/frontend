@@ -1,8 +1,4 @@
 import paper from './img/paper.png'
-import blog from './img/blog.png'
-import sound from './img/sound.png'
-import curiculum from './img/curiculum.png'
-import h5p from './img/h5p.svg'
 
 const getStyles = (palette, resolution) => {
   const root = {
@@ -70,7 +66,7 @@ const getStyles = (palette, resolution) => {
       button: { color: '#727b92' },
     },
 
-    curriculum: {
+    storage: {
       ...root,
       flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
 
@@ -81,11 +77,12 @@ const getStyles = (palette, resolution) => {
 
       image: {
         ...background,
-        backgroundImage: `url("${curiculum}")`,
+        backgroundImage:
+          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e33583f540683ea1e9_landing_page.jpg")',
       },
     },
 
-    video: {
+    containers: {
       ...root,
       text,
       paragraph: { textAlign: 'right' },
@@ -107,85 +104,6 @@ const getStyles = (palette, resolution) => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-end',
-      },
-    },
-
-    sound: {
-      ...root,
-      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
-
-      text,
-      title: { width: '100%' },
-      paragraph: { width: '100%' },
-      pricing: { width: '100%' },
-      button: { marginBottom: 20 },
-
-      image: {
-        ...background,
-        backgroundImage: `url("${sound}")`,
-        marginTop: resolution.width < 1200 ? 0 : 80,
-        marginBottom: resolution.width < 1200 ? 0 : 80,
-      },
-    },
-
-    scorm: {
-      ...root,
-      text,
-      button: { marginBottom: 20 },
-
-      image: {
-        ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e475add137fc75c5c6_social_media.jpg")',
-      },
-
-      title: {
-        textAlign: 'right',
-        width: '100%',
-      },
-
-      paragraph: {
-        textAlign: 'right',
-        width: '100%',
-      },
-    },
-
-    blog: {
-      ...root,
-      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
-
-      text,
-      title: { width: '100%' },
-      paragraph: { width: '100%' },
-      pricing: { width: '100%' },
-      button: { marginBottom: 20 },
-
-      image: {
-        ...background,
-        backgroundImage: `url("${blog}")`,
-      },
-    },
-
-    h5p: {
-      ...root,
-      text,
-      button: { marginBottom: 20 },
-
-      image: {
-        ...background,
-        backgroundImage: `url("${h5p}")`,
-        marginLeft: resolution.width < 1200 ? 0 : 50,
-        marginRight: resolution.width < 1200 ? 0 : 50,
-      },
-
-      title: {
-        textAlign: 'right',
-        width: '100%',
-      },
-
-      paragraph: {
-        textAlign: 'right',
-        width: '100%',
       },
     },
   }
