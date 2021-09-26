@@ -1,4 +1,6 @@
 import paper from './img/paper.png'
+import storage from './img/storage.png'
+import containers from './img/containers.png'
 
 const getStyles = (palette, resolution) => {
   const root = {
@@ -77,8 +79,7 @@ const getStyles = (palette, resolution) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e33583f540683ea1e9_landing_page.jpg")',
+        backgroundImage: `url("${storage}")`,
       },
     },
 
@@ -90,8 +91,7 @@ const getStyles = (palette, resolution) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e33583f540683ea1e9_landing_page.jpg")',
+        backgroundImage: `url("${containers}")`,
       },
 
       title: {
