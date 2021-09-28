@@ -2,29 +2,34 @@ import moodle from './img/moodle.png'
 import moodle2 from './img/moodle2.png'
 import learning from './img/learning.png'
 
-const getStyles = (palette) => {
+const getStyles = (palette, resolution) => {
+  const root = {
+    display: 'flex',
+    alignItems: 'stretch',
+    justifyContent: 'center',
+    minHeight: resolution.width < 1200 ? null : '100vh',
+  }
+
   return {
     above: {
+      ...root,
       padding: 50,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'stretch',
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
 
       message: {
         fontSize: '3rem',
-        width: '50%',
         color: '#666',
-        marginRight: 50,
         flex: 1,
         display: 'flex',
         alignItems: 'center',
         padding: 30,
+        width: resolution.width < 1200 ? null : '50%',
+        marginRight: resolution.width < 1200 ? null : 50,
       },
 
       picture: {
-        flex: 1,
-        height: 500,
-        width: '50%',
+        width: resolution.width < 1200 ? '100%' : '50%',
+        height: resolution.width < 1200 ? 500 : null,
         backgroundImage: `url("${moodle}")`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
@@ -32,9 +37,11 @@ const getStyles = (palette) => {
       },
     },
     what: {
-      textAlign: 'center',
-      color: '#666',
-      fontSize: '4rem',
+      title: {
+        textAlign: 'center',
+        color: '#666',
+        fontSize: '4rem',
+      },
 
       explanation: {
         color: 'white',
@@ -47,10 +54,12 @@ const getStyles = (palette) => {
     },
 
     how: {
-      textAlign: 'center',
-      color: '#666',
-      fontSize: '4rem',
-      marginTop: 100,
+      title: {
+        textAlign: 'center',
+        color: '#666',
+        fontSize: '4rem',
+        marginTop: 100,
+      },
 
       explanation: {
         fontSize: '2rem',
@@ -84,24 +93,25 @@ const getStyles = (palette) => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
+        flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
       },
 
-      inner: {
-        padding: 50,
-        width: '50%',
+      explanation: {
         display: 'flex',
         alignItems: 'stretch',
         justifyContent: 'center',
         flexDirection: 'column',
+        padding: 50,
+        width: resolution.width < 1200 ? null : '50%',
       },
 
       picture: {
-        width: '50%',
         height: 500,
         backgroundSize: 'contain',
         backgroundImage: `url("${moodle2}")`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
+        width: resolution.width < 1200 ? '100%' : '50%',
       },
     },
 
