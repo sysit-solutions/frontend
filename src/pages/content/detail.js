@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { observer } from 'mobx-react'
-import { withTheme, Button, Toolbar, Link } from '@material-ui/core'
+import { withTheme, Button, Toolbar } from '@material-ui/core'
 import Template from 'templates/default/detail'
 import getStyles from './styles'
 import store from 'store'
@@ -23,35 +24,37 @@ class Content extends React.Component {
               for your learners.
             </p>
             <div style={styles.above.button}>
-              <Button variant="contained" color="secondary">
-                View Pricing
-              </Button>
+              <Link to="/pricing">
+                <Button variant="contained" color="secondary">
+                  View Pricing
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
         <Toolbar style={styles.toolbar}>
-          <Link href="#curriculum">
+          <a href="#curriculum">
             <Button style={styles.toolbar.button}>curriculum writing</Button>
-          </Link>
-          <Link href="#video">
+          </a>
+          <a href="#video">
             <Button style={styles.toolbar.button}>
               video recording & editing
             </Button>
-          </Link>
-          <Link href="#sound">
+          </a>
+          <a href="#sound">
             <Button style={styles.toolbar.button}>
               sound recording & editing
             </Button>
-          </Link>
-          <Link href="#scorm">
+          </a>
+          <a href="#scorm">
             <Button style={styles.toolbar.button}>SCORM development</Button>
-          </Link>
-          <Link href="#blog">
+          </a>
+          <a href="#blog">
             <Button style={styles.toolbar.button}>blog writing</Button>
-          </Link>
-          <Link href="#h5p">
+          </a>
+          <a href="#h5p">
             <Button style={styles.toolbar.button}>H5P content</Button>
-          </Link>
+          </a>
         </Toolbar>
         <div style={styles.curriculum} id="curriculum">
           <div style={styles.curriculum.text}>

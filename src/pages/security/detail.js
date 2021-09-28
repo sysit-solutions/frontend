@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { observer } from 'mobx-react'
-import { withTheme, Button, Toolbar, Link } from '@material-ui/core'
+import { withTheme, Button, Toolbar } from '@material-ui/core'
 import Template from 'templates/default/detail'
 import store from 'store'
 
@@ -18,32 +19,36 @@ class Security extends React.Component {
             <h1 style={styles.above.title}>{data.above.title}</h1>
             <p style={styles.above.paragraph}>{data.above.paragraph}</p>
             <div style={styles.above.button}>
-              <Button variant="contained" color="secondary">
-                View Pricing
-              </Button>
+              <Link to="/pricing">
+                <Button variant="contained" color="secondary">
+                  View Pricing
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
         <Toolbar style={styles.toolbar}>
-          <Link href="#storage">
+          <a href="#storage">
             <Button style={styles.toolbar.button}>storage</Button>
-          </Link>
-          <Link href="#containers">
+          </a>
+          <a href="#containers">
             <Button style={styles.toolbar.button}>containers</Button>
-          </Link>
+          </a>
         </Toolbar>
         <div style={styles.storage} id="storage">
           <div style={styles.storage.text}>
             <h2 style={styles.storage.title}>{data.storage.title}</h2>
             <p>{data.storage.paragraph}</p>
             <div style={styles.storage.pricing}>
-              <Button
-                variant="contained"
-                color="primary"
-                style={styles.storage.button}
-              >
-                View Pricing
-              </Button>
+              <Link to="/pricing">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  style={styles.storage.button}
+                >
+                  View Pricing
+                </Button>
+              </Link>
             </div>
           </div>
           <div style={styles.storage.image} />
@@ -56,13 +61,15 @@ class Security extends React.Component {
               {data.containers.paragraph}
             </p>
             <div style={styles.containers.pricing}>
-              <Button
-                variant="contained"
-                color="primary"
-                style={styles.containers.button}
-              >
-                View Pricing
-              </Button>
+              <Link to="/pricing">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  style={styles.containers.button}
+                >
+                  View Pricing
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
