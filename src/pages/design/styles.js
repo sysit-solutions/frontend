@@ -1,40 +1,45 @@
 import design from './img/design.svg'
 import design2 from './img/design2.png'
 
-const getStyles = (palette) => {
+const getStyles = (palette, resolution) => {
+  const root = {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: resolution.width < 1200 ? 'column' : 'row',
+  }
+
   return {
     above: {
-      padding: 50,
-      paddingTop: 0,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'stretch',
+      ...root,
 
       message: {
         fontSize: '2rem',
-        width: '50%',
         color: '#666',
-        marginRight: 50,
         flex: 1,
         display: 'flex',
         alignItems: 'center',
         padding: 30,
+        width: resolution.width < 1200 ? '100%' : '50%',
+        marginRight: resolution.width < 1200 ? null : 50,
+        textAlign: resolution.width < 1200 ? 'center' : null,
       },
 
       picture: {
-        flex: 1,
-        height: 600,
-        width: '50%',
+        height: 500,
         backgroundImage: `url("${design}")`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
+        width: resolution.width < 1200 ? '100%' : '50%',
       },
     },
     what: {
-      textAlign: 'center',
-      color: '#666',
-      fontSize: '4rem',
+      title: {
+        textAlign: 'center',
+        color: '#666',
+        fontSize: '4rem',
+      },
 
       explanation: {
         fontSize: '2rem',
@@ -45,10 +50,13 @@ const getStyles = (palette) => {
     },
 
     why: {
-      textAlign: 'center',
-      color: '#666',
-      fontSize: '4rem',
-      padding: 50,
+      title: {
+        textAlign: 'center',
+        color: '#666',
+        fontSize: '4rem',
+        padding: 50,
+      },
+
       explanation: {
         backgroundColor: palette.primary.main,
         color: '#ffffff',
@@ -60,25 +68,24 @@ const getStyles = (palette) => {
     },
 
     learn: {
+      ...root,
       padding: 50,
-      display: 'flex',
-      alignItems: 'stretch',
-      justifyContent: 'center',
       minHeight: '20vw',
 
       picture: {
-        width: '50%',
+        height: 500,
         backgroundSize: 'contain',
         backgroundImage: `url("${design2}")`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
+        width: resolution.width < 1200 ? '100%' : '50%',
       },
 
       text: {
-        width: '50%',
         paddingLeft: 20,
         display: 'flex',
         alignItems: 'center',
+        width: resolution.width < 1200 ? '100%' : '50%',
       },
 
       paragraph: {
