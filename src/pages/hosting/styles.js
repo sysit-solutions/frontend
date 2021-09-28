@@ -1,24 +1,28 @@
 import graph from './img/graph.jpg'
 
-const getStyles = (palette) => {
+const getStyles = (palette, resolution) => {
   return {
     above: {
       padding: 50,
       display: 'flex',
       aligntItems: 'center',
       justifyContent: 'center',
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
 
       text: {
         fontSize: '5rem',
         width: '50%',
         color: '#666',
+        width: resolution.width < 1200 ? '100%' : '50%',
       },
 
       picture: {
-        backgroundSize: '100% 100%',
-        backgroundImage: `url("${graph}")`,
         height: 500,
-        width: '50%',
+        backgroundImage: `url("${graph}")`,
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        width: resolution.width < 1200 ? '100%' : '50%',
       },
     },
 

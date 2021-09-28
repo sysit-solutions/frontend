@@ -51,8 +51,7 @@ class Landing extends React.Component {
   }
 
   render() {
-    const { height, width } = store.resolution
-    const styles = getStyles({ height, width }, this.props.theme.palette)
+    const styles = getStyles(this.props.theme.palette, store.resolution)
     return (
       <Template style={{}}>
         <div style={styles.root}>

@@ -1,7 +1,7 @@
 import graph from './img/hosting.svg'
 import logo from './img/logo.svg'
 
-const getStyles = (resolution, palette) => {
+const getStyles = (palette, resolution) => {
   return {
     root: {
       height: 'calc(100vh - 65px)',
