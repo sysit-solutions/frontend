@@ -21,7 +21,10 @@ class Design extends React.Component {
     return (
       <Template style={{}}>
         <div style={styles.above}>
-          <p style={styles.above.message}>{data.above.message}</p>
+          <div style={styles.above.content}>
+            <p style={styles.above.main}>{data.above.main}</p>
+            <p style={styles.above.message}>{data.above.message}</p>
+          </div>
           <div style={styles.above.picture} />
         </div>
 
@@ -34,7 +37,7 @@ class Design extends React.Component {
         <div style={styles.learn}>
           <div style={styles.learn.picture} />
           <div style={styles.learn.text}>
-            <p style={styles.learn.paragraph}>{data.learn.paragraph}</p>
+            <p>{data.learn.paragraph}</p>
           </div>
         </div>
 

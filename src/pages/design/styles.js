@@ -6,24 +6,30 @@ const getStyles = (palette, resolution) => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    flexDirection: resolution.width < 1200 ? 'column' : 'row',
+  }
+
+  const pale = {
+    fontSize: '2rem',
+    color: '#666',
+  }
+
+  const message = {
+    display: 'flex',
+    alignItems: 'center',
+    padding: 0,
+    marginBottom: 10,
+    marginRight: resolution.width < 1200 ? null : 50,
   }
 
   return {
     above: {
       ...root,
+      minHeight: '100vh',
+      flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
 
-      message: {
-        fontSize: '2rem',
-        color: '#666',
-        flex: 1,
-        display: 'flex',
-        alignItems: 'center',
-        padding: 30,
-        width: resolution.width < 1200 ? '100%' : '50%',
-        marginRight: resolution.width < 1200 ? null : 50,
-        textAlign: resolution.width < 1200 ? 'center' : null,
-      },
+      content: { padding: 30 },
+      main: { ...pale, ...message },
+      message,
 
       picture: {
         height: 500,
@@ -37,14 +43,10 @@ const getStyles = (palette, resolution) => {
     what: {
       title: {
         textAlign: 'center',
-        color: '#666',
-        fontSize: '4rem',
       },
 
       explanation: {
-        fontSize: '2rem',
-        padding: 80,
-        paddingTop: 100,
+        padding: 20,
         paddingBottom: 100,
       },
     },
@@ -52,23 +54,22 @@ const getStyles = (palette, resolution) => {
     why: {
       title: {
         textAlign: 'center',
-        color: '#666',
-        fontSize: '4rem',
         padding: 50,
       },
 
       explanation: {
         backgroundColor: palette.primary.main,
         color: '#ffffff',
-        fontSize: '2rem',
-        padding: 80,
-        paddingTop: 100,
-        paddingBottom: 100,
+        padding: 50,
+        paddingLeft: 20,
+        paddingRight: 20,
+        marginBottom: 100,
       },
     },
 
     learn: {
       ...root,
+      flexDirection: resolution.width < 1200 ? 'column' : 'row',
       padding: 50,
       minHeight: '20vw',
 
@@ -86,10 +87,6 @@ const getStyles = (palette, resolution) => {
         display: 'flex',
         alignItems: 'center',
         width: resolution.width < 1200 ? '100%' : '50%',
-      },
-
-      paragraph: {
-        fontSize: '1.5rem',
       },
     },
 

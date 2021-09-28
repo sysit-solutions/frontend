@@ -1,7 +1,8 @@
 const data = {
   above: {
+    main: 'Have you ever been frustrated with a learning experience?',
     message:
-      'Have you ever been frustrated with a learning experience? Have you ever found yourself in this situation: "I\'m not sure what the point of this lesson is. What are they trying to teach me?" Don\'t make the same mistake with your course.',
+      'Have you ever found yourself in this situation: "I\'m not sure what the point of this lesson is. What are they trying to teach me?" Don\'t make the same mistake with your course.',
   },
 
   what: {
