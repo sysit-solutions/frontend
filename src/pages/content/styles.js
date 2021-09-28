@@ -1,8 +1,10 @@
-import paper from './img/paper.png'
 import blog from './img/blog.png'
-import sound from './img/sound.png'
 import curiculum from './img/curiculum.png'
 import h5p from './img/h5p.svg'
+import paper from './img/paper.png'
+import scorm from './img/scorm.png'
+import sound from './img/sound.png'
+import video from './img/video.png'
 
 const getStyles = (palette, resolution) => {
   const root = {
@@ -14,7 +16,6 @@ const getStyles = (palette, resolution) => {
   }
 
   const background = {
-    width: '50%',
     backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
@@ -23,7 +24,6 @@ const getStyles = (palette, resolution) => {
   }
 
   const text = {
-    width: '50%',
     padding: 20,
     display: 'flex',
     flexDirection: 'column',
@@ -93,8 +93,9 @@ const getStyles = (palette, resolution) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e33583f540683ea1e9_landing_page.jpg")',
+        marginTop: 80,
+        marginBottom: 80,
+        backgroundImage: `url("${video}")`,
       },
 
       title: {
@@ -135,8 +136,9 @@ const getStyles = (palette, resolution) => {
 
       image: {
         ...background,
-        backgroundImage:
-          'url("https://assets.website-files.com/602aa5676021244054c8c032/608e47e475add137fc75c5c6_social_media.jpg")',
+        marginLeft: 20,
+        marginRight: 20,
+        backgroundImage: `url("${scorm}")`,
       },
 
       title: {
