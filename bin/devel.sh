@@ -7,4 +7,9 @@ setup
 
 echo "Frontend"
 echo "========"
-env HOST=$(hostname) "${PACKAGE_MANAGER}" start
+if [ ! -z $(which hostname &>/dev/null) ]; then
+  export HOST=$(hostname)
+elif [ ! -z $(which hostnamectl &>/dev/null)]; then
+  export HOST=$(hostnamectl hostname)
+fi
+"${PACKAGE_MANAGER}" start
