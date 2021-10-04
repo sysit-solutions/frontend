@@ -170,6 +170,7 @@ class Template extends React.Component {
               alignItems: 'center',
               flexDirection: 'row',
               boxShadow: 'none',
+              overflow: 'none',
             }}
           >
             <Link to="/" style={{ marginLeft: 10 }}>
@@ -180,8 +181,6 @@ class Template extends React.Component {
                 display: 'flex',
                 justifyContent,
                 flex: 1,
-                paddingLeft: '10%',
-                paddingRight: '10%',
               }}
             >
               {menuItems}

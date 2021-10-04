@@ -1,4 +1,5 @@
 import React from 'react'
+import { observer } from 'mobx-react'
 import { withTheme } from '@material-ui/core'
 import { AppBar, Toolbar, Typography, Paper } from '@material-ui/core'
 import Template from 'templates/default/detail'
@@ -121,4 +122,4 @@ class Hosting extends React.Component {
   }
 }
 
-export default withTheme(Hosting)
+export default withTheme(observer(Hosting))
