@@ -11,7 +11,11 @@ const { learndash } = data
 
 class LearnDash extends React.Component {
   render() {
-    const styles = getStyles(this.props.theme.palette, store.resolution)
+    const styles = getStyles(
+      this.props.theme.palette,
+      store.resolution,
+      data.learndash.images
+    )
     return (
       <Template style={{}}>
         <div style={styles.above}>

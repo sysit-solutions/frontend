@@ -12,7 +12,11 @@ const { moodle } = data
 
 class Moodle extends React.Component {
   render() {
-    const styles = getStyles(this.props.theme.palette, store.resolution)
+    const styles = getStyles(
+      this.props.theme.palette,
+      store.resolution,
+      data.moodle.images
+    )
     return (
       <Template style={{}}>
         <div style={styles.above}>

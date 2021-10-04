@@ -11,7 +11,11 @@ const { opigno } = data
 
 class Opigno extends React.Component {
   render() {
-    const styles = getStyles(this.props.theme.palette, store.resolution)
+    const styles = getStyles(
+      this.props.theme.palette,
+      store.resolution,
+      data.opigno.images
+    )
     return (
       <Template style={{}}>
         <div style={styles.above}>

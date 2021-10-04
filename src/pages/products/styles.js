@@ -1,19 +1,16 @@
-import moodle from './img/moodle.png'
 import moodle2 from './img/moodle2.png'
 import learning from './img/learning.png'
 
-const getStyles = (palette, resolution) => {
-  const root = {
-    display: 'flex',
-    alignItems: 'stretch',
-    justifyContent: 'center',
-    minHeight: resolution.width < 1200 ? null : '100vh',
-  }
-
+const getStyles = (palette, resolution, images) => {
   return {
     above: {
-      ...root,
       padding: 50,
+      paddingLeft: 80,
+      paddingRight: 80,
+      display: 'flex',
+      alignItems: 'stretch',
+      justifyContent: 'center',
+      minHeight: resolution.width < 1200 ? null : 'calc(100vh - 100px - 64px)',
       flexDirection: resolution.width < 1200 ? 'column-reverse' : 'row',
 
       message: {
@@ -22,7 +19,6 @@ const getStyles = (palette, resolution) => {
         flex: 1,
         display: 'flex',
         alignItems: 'center',
-        padding: 30,
         width: resolution.width < 1200 ? null : '50%',
         marginRight: resolution.width < 1200 ? null : 50,
       },
@@ -30,7 +26,7 @@ const getStyles = (palette, resolution) => {
       picture: {
         width: resolution.width < 1200 ? '100%' : '50%',
         height: resolution.width < 1200 ? 500 : null,
-        backgroundImage: `url("${moodle}")`,
+        backgroundImage: `url("${images.above}")`,
         backgroundSize: 'contain',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -66,12 +62,6 @@ const getStyles = (palette, resolution) => {
         padding: 80,
         paddingTop: 0,
         paddingBottom: 100,
-      },
-
-      picture: {
-        width: '50%',
-        backgroundSize: '100% 100%',
-        backgroundImage: `url("${learning}")`,
       },
 
       content: {
