@@ -29,14 +29,14 @@ const data = {
         title: 'Initial Course Development Phase',
         bullets: [
           'Identifying your audience and their level of expertise',
-          'Clarifying your goals and objectives',
+          'Claryfying your goals and objetives',
           'Writing course goals and objectives',
         ],
       },
       {
         title: 'Curriculum Development',
         bullets: [
-          'Creating course outline and hirerarhy',
+          'Creating course outline and hierarchy',
           'Specifying Modules and Lessons',
           'Creating course content strategy',
         ],
@@ -54,7 +54,7 @@ const data = {
         bullets: [
           'Choosing the right platform for you',
           'Creating and uploading courses to LMS',
-          'Creating user profiles and asigning them to courses',
+          'Creating user profiles and assigning them to courses',
         ],
       },
     ],
