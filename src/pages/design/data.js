@@ -29,7 +29,7 @@ const data = {
         title: 'Initial Course Development Phase',
         bullets: [
           'Identifying your audience and their level of expertise',
-          'Claryfying your goals and objetives',
+          'Clarifying your goals and objectives',
           'Writing course goals and objectives',
         ],
       },
