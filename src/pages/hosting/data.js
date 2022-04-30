@@ -1,12 +1,12 @@
 const data = {
   above: {
-    text: 'Take charge of your own data with full disk encryption',
+    text: 'Take charge of your data with full disk encryption.',
   },
 
   hosting: {
     title: 'Hosting',
     content:
-      'We are your reliable data management solution. With our knowledge of compliance, security and flexibility, we will help your employees or students have a safe way of collaborating with one another, as well as accessing the right information at any given moment. You can be certain that your data will NEVER be shared with a third party while providing flexibility for future needs from international students and mobile workforces in an always-on 24/7 culture.',
+      'We are your reliable data management solution. With our knowledge of compliance, security, and flexibility, we will help your employees or students have a safe way of collaborating and accessing the correct information at any given moment. You can be confident that your data will NEVER be shared with a third party while providing flexibility for the future needs of international students and mobile workforces in an always-on, 24/7 culture.',
   },
 
   services: [

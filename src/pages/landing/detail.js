@@ -2,8 +2,6 @@ import React from 'react'
 import { observer } from 'mobx-react'
 import { Link } from 'react-router-dom'
 import {
-  AppBar,
-  Toolbar,
   Button,
   Card,
   CardActionArea,
@@ -57,7 +55,7 @@ class Landing extends React.Component {
         <div style={styles.root}>
           <div style={styles.first.left}>
             <p style={styles.first.paragraph}>
-              Offering affordable and reliable open source education hosting
+              Offering affordable and reliable open-source education hosting
               solutions designed specifically for your needs.
             </p>
             <Link to="/pricing">
@@ -120,16 +118,15 @@ class Landing extends React.Component {
           </div>
           <div style={styles.about.right}>
             <p>
-              Welcome to SysIT Solutions. With our help teachers, students and
-              business professionals from all around the world would be able to
-              create their own e-learning content without having to worry about
-              technical issues like security updates, backups or server
-              maintenance.
+              Welcome to SysIT Solutions. With our help, teachers, students, and
+              business professionals worldwide would be able to create their
+              e-learning content without worrying about technical issues like
+              security updates, backups, or server maintenance.
             </p>
             <p>
               Our mission is to make online education accessible for everyone.
               We do this by offering affordable solutions that are easy to use
-              and provide you with all the tools necessary for running your own
+              and provide you with all the tools necessary for running your
               online classroom or a coaching service in just a few clicks!
             </p>
           </div>

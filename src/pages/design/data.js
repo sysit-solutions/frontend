@@ -8,7 +8,7 @@ const data = {
   what: {
     title: 'What Is Instructional Design?',
     explanation:
-      'Instructional design is a pedagogical field that focuses on creating engaging web-based courses and developing the materials to improve digital experiences for online learners. Our Instructional Design expertise in instructional theory, multimedia production, gamification techniques and more - all with one goal: making learning better!',
+      'Instructional design is a pedagogical field that focuses on creating engaging web-based courses and developing the materials to improve digital experiences for online learners. Our Instructional Design expertise in instructional theory, multimedia production, gamification techniques, and more aims to make learning better!',
   },
 
   why: {
@@ -19,7 +19,7 @@ const data = {
 
   learn: {
     paragraph:
-      'It is all about making sure your students can get what they need while also having fun with it! We are here to help you understand the process of personalized learning needs. The most important goal for us is to make your learners active participants in their learning process. We will use various tools such as simulations, videos, demonstrations, games, and worksheets to engage learners based on their individual needs and goals. In this way, learners can better achieve success with any given task or objective set before them and you will get another satisfied client.',
+      'It is all about making sure your students get what they need while also having fun! We are here to help you understand the process of personalized learning needs. The most important goal for us is to make your learners active participants in their learning process. We will use various tools such as simulations, videos, demonstrations, games, and worksheets to engage learners based on their individual needs and goals. In this way, learners can better achieve success with any given task or objective set before them, and you will get another satisfied client.',
   },
 
   help: {

@@ -65,11 +65,11 @@ class Content extends React.Component {
               complex undertaking, but when done correctly, it will help to
               ensure that students are empowered to explore their world and
               develop meaningful skills. There are many benefits to writing your
-              personalized curriculum crafted to provide students with
-              individualized learning opportunities: utilizing the most
-              up-to-date research; having autonomy at work and feeling
-              accomplished. Developing curricula is not easy, but with our help,
-              it should be much easier!
+              personalized curriculum to provide students with individualized
+              learning opportunities: utilizing the most up-to-date research,
+              having autonomy at work, and feeling accomplished. Developing
+              curricula is not easy, but with our help, it should be much
+              easier!
             </p>
             <div style={styles.curriculum.pricing}>
               <Button
@@ -110,13 +110,13 @@ class Content extends React.Component {
           <div style={styles.sound.text}>
             <h2 style={styles.sound.title}>Sound Recording & Editing</h2>
             <p style={styles.sound.paragraph}>
-              It is essential for educators to take advantage of available
-              multimedia tools to engage learners and make courses more
-              interactive. Sound effects, voiceovers, music, or dialogue can
-              make your course stand out from the rest. But your sound material
-              needs to be recorded and edited in a professional studio. This is
-              where we step in. With a professional voice actor and a
-              cutting-edge studio, your content will be much easier to follow.
+              Educators need to use multimedia tools to engage learners and make
+              courses more interactive. Effective sound edits, voiceovers,
+              music, or interesting dialogue can elevate your course and help
+              you stand out from the rest of the content creators. But your
+              sound material needs to be recorded and edited in a professional
+              studio. This is where we step in. Your content will be easier to
+              follow with a professional voice actor and a cutting-edge studio.
               Perfect sound will help students better understand course
               materials and create an environment that mimics real-life
               situations.
@@ -144,10 +144,9 @@ class Content extends React.Component {
               interactive and can be customized for the learners' needs. It also
               makes it more likely that students will have a positive experience
               with your course. Implementing SCORM in your online courses lets
-              you specify how the material should appear on different devices,
-              so if they are using a mobile device or desktop computer, your
-              content can be appropriately optimized for a better learning
-              experience.
+              you specify how the material should appear on different devices.
+              If they use a mobile device or desktop computer, your content can
+              be appropriately optimized for a better learning experience.
             </p>
             <div style={styles.scorm.pricing}>
               <Button
@@ -189,14 +188,14 @@ class Content extends React.Component {
           <div style={styles.h5p.text}>
             <h2 style={styles.h5p.title}>H5P content</h2>
             <p style={styles.h5p.paragraph}>
-              Every day, educators are trying to find innovative ways to make
-              their courses more engaging. One way you can do this is by adding
-              H5P content into your course. It offers various media formats that
-              will help students stay engaged with the material and allow them
-              to have a break from reading through long paragraphs of text that
-              they might not otherwise enjoy. If you don't have enough time to
-              create a detailed SCORM package, try using H5P. It's much faster
-              and doesn't require any authoring tools.
+              Every day, educators try to find innovative ways to make their
+              courses more engaging. You can do this by adding H5P content to
+              your course. It offers various media formats that will help
+              students stay engaged with the material and allow them to have a
+              break from reading through long paragraphs of text that they might
+              not otherwise enjoy. If you don't have enough time to create a
+              detailed SCORM package, try using H5P. It's much faster and
+              doesn't require any authoring tools.
             </p>
             <div style={styles.h5p.pricing}>
               <Button
